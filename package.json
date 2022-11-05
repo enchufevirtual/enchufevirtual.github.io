@@ -1,0 +1,44 @@
+{
+  "name": "enchufevirtual",
+  "version": "1.0.0",
+  "homepage": "https://enchufevirtual.com",
+  "description": "Open Source Projects",
+  "main": "./src/index.js",
+  "scripts": {
+    "predeploy": "npm run build && echo enchufevirtual.com > ./build/CNAME",
+    "deploy": "gh-pages -d build",
+    "start": "webpack serve --open",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
+  },
+  "keywords": [
+    "OS",
+    "EnchufeVirtual"
+  ],
+  "author": "@chendoio <chendoec@live.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/preset-react": "^7.18.6",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "babel-loader": "^9.0.0",
+    "css-loader": "^6.7.1",
+    "gh-pages": "^4.0.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "node-sass": "^7.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass-loader": "^13.1.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "copy-webpack-plugin": "^11.0.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}

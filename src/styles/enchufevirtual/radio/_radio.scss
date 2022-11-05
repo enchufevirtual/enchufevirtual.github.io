@@ -1,0 +1,204 @@
+/*Enchufe Virtual - Radio*/
+.Radio .controls {
+  background-color: $background;
+  border-top: $border;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .background-play {
+    width: 80px;
+    height: 50px;
+    outline: none;
+    background: $background;
+    border-right: $border !important;
+    cursor: pointer;
+    border: 0;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  marquee {
+    color: $solid;
+  }
+  marquee p {
+    font-size: 12px;
+  }
+  .volumen {
+    width: 140px;
+    height: 50px;
+    background: $background;
+    border-left: $border;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.background-play .play {
+  width: 24px;
+  height: 24px;
+  background: $solid;
+  margin-left: 15px;
+  z-index: 100;
+  clip-path: polygon(0 0, 80% 48%, 0 100%, 0% 100%);
+  transition: clip-path 0.5s ease;
+  transition-delay: 0.4s;
+  
+}
+.background-play .play.active {
+  transition: clip-path 0.1s;
+  clip-path: polygon(0 0, 27% 0, 27% 100%, 0% 100%);
+}
+.background-play .pause {
+  width: 6px;
+  height: 24px;
+  background: $solid;
+  position: absolute;
+  top: 13px;
+  bottom: 0;
+  z-index: 100;
+  opacity: 0;
+}
+.background-play .pause.active {
+  opacity: 1;
+  transition: opacity 1s;
+  animation: move 0.8s cubic-bezier(0.52, 1.64, 0.37, 0.66) forwards;
+  animation-delay: 0.2s;
+}
+.background-play .pause.pauseToPlay {
+  animation: pauseToPlay 0.4s ease alternate-reverse;
+}
+
+@keyframes pauseToPlay {
+  10% {
+    transform: rotate(90deg);
+    left: 73px;
+  }
+  20%,
+  40% {
+    transform: rotate(180deg);
+    left: 92px;
+  }
+  50% {
+    left: 92px;
+    height: 24px;
+    top: 10px;
+    bottom: 10px;
+    transform: rotate(180deg);
+  }
+  100% {
+    left: 92px;
+    height: 24px;
+    bottom: 0;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes move {
+  10% {
+    transform: rotate(90deg);
+    left: 35px;
+  }
+  20%,
+  40% {
+    transform: rotate(180deg);
+    left: 36px;
+  }
+  50% {
+    left: 37px;
+    height: 24px;
+    bottom: 0;
+    transform: rotate(180deg);
+  }
+  100% {
+    left: 45px;
+    height: 24px;
+    bottom: 0;
+    transform: rotate(180deg);
+  }
+}
+
+/* <---- Estilos al input range ----> */  
+input[type='range'] {
+  display: block;
+  width: 100px;
+  outline: none;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range'],
+input[type='range']::-webkit-slider-runnable-track,
+input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: calc(4px /2);
+  height: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background-color: $solid;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid $solid;
+  margin-top: -6px;
+}
+
+input[type=range]::-moz-range-thumb {
+  background-color: $solid;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid $solid;
+}
+
+input[type=range]::-ms-thumb {
+  background-color: $solid;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid $solid;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background-color: $solid;
+  border-radius: calc(4px /2);
+  height: 3px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  outline: none;
+  border-radius: calc(4px /2);
+}
+
+input[type=range]::-moz-range-track {
+  background-color: $solid;
+  border-radius: calc(4px /2);
+  height: 3px;
+}
+
+input[type=range]::-ms-track {
+  background-color: $solid;
+  border-radius: calc(4px /2);
+  height: 3px;
+}
+
+input[type=range]::-ms-fill-lower {
+  background-color: $solid;
+}
+
+input[type=range]::-ms-fill-upper {
+  background-color: $solid;
+} 

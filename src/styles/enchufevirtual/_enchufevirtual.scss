@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+// body content 
+body {
+  background-color: $background;
+  color: $solid;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: $font-primary;
+  display: grid;
+  position: relative;
+  user-select: none;
+  place-content: center;
+  place-items: center;
+  width: 95%;
+  margin: 0 auto;
+  height: 100vh;
+}
+h1 {
+  color: $primary;
+  font-family: $font-primary;
+
+  @include tablet {
+    h1 {
+      font-size: 18px;
+    };
+  }
+}
+h2 {
+  height: 2rem;
+  padding: 8px;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#app {
+  height: calc(100vh - 150px);
+}
