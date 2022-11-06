@@ -28,7 +28,7 @@
   width: 100%;
   position: absolute;
   left: 0;
-  transition: all 1s;
+  transition: all 1.5s;
 }
 .load-circle {
   margin: 50vh auto;
@@ -41,10 +41,10 @@
   -webkit-animation: rotate 1.2s infinite linear;
   animation: rotate 1.2s infinite linear;
   animation-fill-mode: forwards;
-  transition: all .3s ease-out;
+  transition: all 1s ease-out;
 }
 .opacity {
-  transition: opacity 0.4s;
+  transition: opacity 1s;
   opacity: 0;
 }
 
