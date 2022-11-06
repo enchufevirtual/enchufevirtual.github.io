@@ -66,12 +66,12 @@
   #Header .menu .Header_social {
     position: absolute;
     flex-direction: column;
-    top: 47px;
+    top: 46px;
     left: 0;
     right: 0;
     width: 100%;
     padding: 1rem;
-    background-color: rgba($background, 0.9);
+    background-color: $background;
     backdrop-filter: blur(7px);
     transform-origin: 0 0;
     transform: translate(-100%,0);
@@ -79,11 +79,18 @@
 
     li {
       margin: 0;
+      border-bottom: $border;
+      padding-bottom: 0.5rem;
+      width: 90%;
+      justify-content: flex-start;
     }
-
+    li:last-child {
+      border-bottom: none;
+    }
     .menu-link {
       margin-bottom: 0.5rem;
     }
+
   }
   #Header .menu .transform {
     transform: translate(0,0) !important;

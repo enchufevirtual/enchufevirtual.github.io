@@ -9,9 +9,9 @@ const MenuBtn = () => {
  
  return (
   <>
-  <div onClick={handleMenu} className={active ? "MenuBtn open" : "MenuBtn"}>
+  <li onClick={handleMenu} className={active ? "MenuBtn open" : "MenuBtn"}>
     <div className="MenuBtn_burger"></div>
-  </div>
+  </li>
   <HeaderSocial />
   </>
 
