@@ -83,6 +83,11 @@
       padding-bottom: 0.5rem;
       width: 90%;
       justify-content: flex-start;
+
+      a {
+        display: block;
+        width: 100%;
+      }
     }
     li:last-child {
       border-bottom: none;
