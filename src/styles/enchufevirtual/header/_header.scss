@@ -3,7 +3,7 @@
 #Header .menu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-color: rgba($background, 0.5);
+  background-color: rgba($background, 0.7);
   backdrop-filter: blur(7px);
   border-bottom: $border;
   width: 100%;
@@ -39,11 +39,6 @@
     }
   }
 }
-// @media (max-width: 768px) {
-//   #Header .menu {
-//     border-bottom: none;
-//   }
-// }
 #Header .menu .Ev {
   display: flex;
   justify-content: flex-start;
@@ -71,16 +66,26 @@
   #Header .menu .Header_social {
     position: absolute;
     flex-direction: column;
-    top: 46px;
+    top: 47px;
+    left: 0;
     right: 0;
+    width: 100%;
     padding: 1rem;
-    background-color: $background;
-    border-left: $border;
-    border-bottom: $border;
+    background-color: rgba($background, 0.9);
+    backdrop-filter: blur(7px);
+    transform-origin: 0 0;
+    transform: translate(-100%,0);
+    transition: transform .5s cubic-bezier(.77,.2,.05,1);
+
+    li {
+      margin: 0;
+    }
 
     .menu-link {
       margin-bottom: 0.5rem;
     }
   }
-
+  #Header .menu .transform {
+    transform: translate(0,0) !important;
+  }
 }

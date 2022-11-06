@@ -1,16 +1,19 @@
 import React from "react";
+import { GlobalProvider } from "@context/GlobalContext";
 
 import Header from "@components/Header/";
 import Radio from "@components/Radio/";
-import Main from "../../containers/Main";
+import Main from "@containers/Main";
 
 const App = () => {
     return (
-        <>
-            <Header />
-            <Main />
-            <Radio />
-        </>
+    <>
+      <GlobalProvider>
+        <Header />
+        <Main />
+        <Radio />
+      </GlobalProvider>
+    </>
     )
 }
 

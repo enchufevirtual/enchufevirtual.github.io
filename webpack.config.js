@@ -20,7 +20,8 @@ module.exports = {
             '@images': path.resolve(__dirname, './public/assets/'),
             '@hooks': path.resolve(__dirname, './hooks/'),
             '@public': path.resolve(__dirname, './public/'),
-            '@containers': path.resolve(__dirname, './src/containers/')
+            '@containers': path.resolve(__dirname, './src/containers/'),
+            '@context': path.resolve(__dirname, './src/context/')
         }
     },
     module: {
