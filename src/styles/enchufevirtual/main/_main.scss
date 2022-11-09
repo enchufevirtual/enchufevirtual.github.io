@@ -7,6 +7,9 @@
   margin: 4rem .5rem;
   position: relative;
 }
+#Main span {
+  color: $primary;
+}
 #Main .title::after {
   content: '';
   position: absolute;
@@ -16,8 +19,11 @@
   background-color: rgba($primary, .1);
 }
 @media (max-width: 991px) {
+  #Main .title {
+    font-size: 24px;
+  }
   #Main .title::after {
-    width: 10%;
+    width: 20%;
   }
 }
 .Main_content {
