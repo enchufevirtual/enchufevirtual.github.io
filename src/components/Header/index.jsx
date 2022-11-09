@@ -13,7 +13,7 @@ const Header  = () => {
 
   return (
     <header id="Header">
-      <ul className="menu" style={{backgroundColor: active ? '#0d0f0f' : null}}>
+      <ul className="menu" style={{backgroundColor: active ? '#161B22' : null}}>
         <li className="Ev">
           <a href="https://enchufevirtual.com/">
             Enchufe Virtual
