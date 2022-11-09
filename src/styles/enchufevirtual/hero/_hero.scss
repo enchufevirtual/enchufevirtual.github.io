@@ -1,0 +1,79 @@
+#Hero {
+  width: 90%;
+  margin: 4rem auto 8rem auto;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #Hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    margin: 8rem auto;
+  }
+}
+.Hero_content h1 {
+  font-weight: 700;
+  font-family: $font-primary;
+}
+.Hero_text {
+  font-size: 18px;
+  font-family: $font-secundary;
+  font-weight: 700;
+  padding: 1rem;
+}
+@media (min-width: 991px) {
+  .Hero_text {
+    font-size: 24px;
+  }
+}
+.Hero_image {
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .Hero_image {
+    margin: 4rem 0;
+  }
+}
+// BTN CONTACT
+.btn {
+  position: relative;
+  margin: 0 auto;
+  width: $btn-w;
+  color: $primary;
+  border: .15em solid $primary;
+  border-radius: 5em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.3em;
+  line-height: 2em;
+  cursor: pointer;  
+  }
+  @media (max-width: 991px) {
+    .btn {
+      margin-bottom: 2rem;
+    }
+  }
+  .dot {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: $dot-w;
+  height: 100%;
+  border-radius: 100%;
+  transition: all 300ms ease;
+  display: none;
+  }
+  .dot:after {
+  content: '';
+  position: absolute;
+  left: calc(50% - .4em);
+  top: -.4em;
+  height: .8em;
+  width: .8em;
+  background: $primary;
+  border-radius: 1em;
+  border: .25em solid $solid;
+  box-shadow: 0 0 .7em $solid,
+      0 0 2em $primary;
+  }

@@ -9,7 +9,7 @@ import MenuBtn from "@components/Header/MenuBtn";
 const Header  = () => {
   const { active } = useContext(GlobalContext);
 
-  const matches = useMediaQuery("(min-width: 769px");
+  const matches = useMediaQuery("(max-width: 768px");
 
   return (
     <header id="Header">
@@ -24,7 +24,7 @@ const Header  = () => {
             <img src={Logo} alt="Logo Enchufe Virtual" />
           </a>
         </li>
-        {matches ? <HeaderSocial /> : <MenuBtn />}
+        {matches ? <MenuBtn /> : <HeaderSocial />}
       </ul>
     </header>
   );

@@ -14,7 +14,10 @@ const Main = () => {
 
   return (
     <div className={{myAnimation: load}} id="Main">
-      {card}
+      <div className="title">Open Source Projects</div>
+      <div className="Main_content">
+        {card}
+      </div>
     </div>
   );
 }
