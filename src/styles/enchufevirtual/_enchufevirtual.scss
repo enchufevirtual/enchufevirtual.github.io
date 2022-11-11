@@ -4,8 +4,6 @@
 body {
   background-color: $background;
   color: $solid;
-  background-size: cover;
-  background-attachment: fixed;
   font-family: $font-primary;
   display: grid;
   position: relative;
@@ -34,5 +32,5 @@ h2 {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 #app {
-  height: calc(100vh - 150px);
+  height: calc(100vh - 100px);
 }
