@@ -16,11 +16,12 @@
   width: 40%;
   bottom: 0.5rem;
   height: 1px;
-  background-color: rgba($primary, .1);
+  background-color: rgba($solid, .1);
 }
 @media (max-width: 991px) {
   #Main .title {
     font-size: 24px;
+    padding-left: 0.5rem;
   }
   #Main .title::after {
     width: 20%;

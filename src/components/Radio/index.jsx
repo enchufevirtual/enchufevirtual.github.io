@@ -1,34 +1,9 @@
-import React, { useState, useRef } from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "@context/GlobalContext";
 
 const Radio = () => {
-  const [active, setActive] = useState(false);
 
-  const audioRef = useRef();
-  let isPlaying = false;
-
-  function onPlay() {
-    const audio = audioRef.current;
-    audio.play();
-    setActive(true);
-    isPlaying = true;
-  }
-  function onPause() {
-    const audio = audioRef.current;
-    audio.pause();
-    setActive(false);
-    isPlaying = false;
-  }
-  async function toggleAudio() {
-    const audio = audioRef.current;
-    if(audio.paused && !isPlaying) { return onPlay(); } 
-    else { if(!audio.paused) { return onPause(); } }
-  }
-  function volume(e) {
-    const volumen = e.target.value;
-    const audio = audioRef.current;
-
-    audio.volume = volumen;
-  } 
+  const { toggleAudio, volume, play, audioRef } = useContext(GlobalContext);
 
   return (
     <div className="Radio">
@@ -37,8 +12,8 @@ const Radio = () => {
       </audio>
       <div className="controls">
           <button onClick={() => toggleAudio()} className="background-play">
-              <span className={active ? "play active" : "play"}></span>
-              <span className={active ? "pause active" : "pause"}></span>        
+              <span className={play ? "play active" : "play"}></span>
+              <span className={play ? "pause active" : "pause"}></span>        
           </button>
           <marquee 
             behavior="scroll" 

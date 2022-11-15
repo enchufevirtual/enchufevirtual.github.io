@@ -44,11 +44,15 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'public/[name].[hash][ext]'
                 }
+            },
+            {
+                test: /\.(woff(2)?|eot|ttf|otf|svg)$/,
+                type: 'asset/inline',
             }
         ]
     },

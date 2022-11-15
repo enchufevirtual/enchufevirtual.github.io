@@ -12,10 +12,9 @@ const Hero = () => {
     <div id="Hero">
       <div className="Hero_content">
         <h1>Enchufe Virtual</h1>      
-        <p className="Hero_text">Space created to share open source projects, taking knowledge to another level</p> 
+        <p className="Hero_text">Space created to share open source projects, taking knowledge to another level.</p> 
         <div onClick={handleContact} className="btn">
           <span>Contact</span>
-          <div className="dot"></div>
         </div>
       </div>
       <div className="Hero_image">
