@@ -1,11 +1,13 @@
-export const database = [
+// @ts-ignore
+import { DataBase } from "database/database.model";
+
+export const database: DataBase[] = [
   {
     title: "Audio Seven",
     description: "Reproductor de Audio creado en Html, Css y JavaScript, sencillo y elegante",
     image: "audioseven.jpg",
     source: "https://github.com/chendoio/audioseven",
     demo: "https://audioseven.vercel.app/",
-    id: 1
   },
   {
     title: "Chendo Calc",
@@ -13,7 +15,6 @@ export const database = [
     image: "chendocalc.jpg",
     source: "https://github.com/chendoio/chendoCalc",
     demo: "https://chendo-calc.vercel.app/",
-    id: 2
   },
   {
     title: "Windows",
@@ -21,7 +22,6 @@ export const database = [
     image: "windows.jpg",
     source: "https://github.com/chendoio/Oschen",
     demo: "https://oschen.netlify.app/",
-    id: 3
   },
   {
     title: "Space",
@@ -29,7 +29,6 @@ export const database = [
     image: "space.jpg",
     source: "https://github.com/chendoio/Space-website",
     demo: "https://space-chen.vercel.app/",
-    id: 4
   },
   {
     title: "Devaechba",
@@ -37,7 +36,6 @@ export const database = [
     image: "devaechba.jpg",
     source: "https://github.com/chendoio",
     demo: "https://github.com/chendoio",
-    id: 5
   },
   {
     title: "Ace Search",
@@ -45,6 +43,5 @@ export const database = [
     image: "buscador.jpg",
     source: "https://github.com/chendoio/asi",
     demo: "https://asi-one.vercel.app/",
-    id: 6
   }
 ]

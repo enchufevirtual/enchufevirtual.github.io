@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const Card = ({data}) => {
+const Card = ({data, id}) => {
   const [click, setClick] = useState(false);
   const [over, setOver] = useState(false);
 
@@ -22,16 +22,17 @@ const Card = ({data}) => {
   }
 
   return (
-    <div 
+    <div
       onTouchStart={handleMouseDown}
       onTouchEnd={handleMouseAll}
-      onMouseDown={handleMouseDown} 
-      onMouseUp={handleMouseAll} 
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseAll}
       onMouseLeave={handleMouseAll}
-      onMouseOver={handleMouseOver} 
-      onMouseOut={handleMouseOut} 
-      className="card" 
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
+      className="card"
       style={{transform: click ? styles.transform : over ? styles.transformOver: "none"}}
+      id={id}
     >
         <img src={`assets/${data.image}`} alt="imagen" />
         <div className="card-body">

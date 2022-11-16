@@ -1,24 +1,24 @@
-import React, { useState, createContext, useEffect, useRef } from "react";
+import React, { useState, createContext, useEffect, useRef, ReactNode } from "react";
 
-const GlobalContext = createContext();
+const GlobalContext = createContext({});
 
-const GlobalProvider = ({children}) => {
+const GlobalProvider: React.FC<{}> = ({children}: { children?: ReactNode }) => {
   const [active, setActive] = useState(false);
   const [play, setPlay] = useState(false);
   const [load, setLoad] = useState(false);
-  
+
   // Menu Toggle
-  const handleMenu = () => {
+  const handleMenu = (): void => {
     return (
       setActive(!active)
     );
   }
   // if Load document
   useEffect(() => {
-    const onLoad = () => {
+    const onLoad = (): void => {
       setLoad(true);
-    }   
-    
+    }
+
     if(document.readyState === 'complete') {
       onLoad();
     } else {
@@ -28,32 +28,32 @@ const GlobalProvider = ({children}) => {
     }
   }, []);
   // Radio - Enchufe Virtual - Config
-  const audioRef = useRef();
+  let audioRef = useRef<null | HTMLMediaElement>(null);
   let isPlaying = false;
 
-  const onPlay = () => {
+  const onPlay = (): void => {
     const audio = audioRef.current;
-    audio.play();
+    audio?.play();
     setPlay(true);
     isPlaying = true;
   }
-  const onPause = () => {
+  const onPause = (): void => {
     const audio = audioRef.current;
-    audio.pause();
+    audio?.pause();
     setPlay(false);
     isPlaying = false;
   }
-  const toggleAudio = async ()  => {
+  const toggleAudio = async (): Promise<void>  => {
     const audio = audioRef.current;
-    if(audio.paused && !isPlaying) { return onPlay(); } 
-    else { if(!audio.paused) { return onPause(); } }
+    if(audio?.paused && !isPlaying) { return onPlay(); }
+    else { if(!audio?.paused) { return onPause(); } }
   }
-  const volume = (e) => {
-    const volumen = e.target.value;
+  const volume = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const volumen = parseFloat(e.target.value);
     const audio = audioRef.current;
+    audio ? audio.volume = volumen : null;
 
-    audio.volume = volumen;
-  } 
+  }
 
   return (
     <GlobalContext.Provider value={{

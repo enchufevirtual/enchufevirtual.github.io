@@ -9,7 +9,6 @@
     Youtube: https://youtube.com/chendoio
 
 -----------------------------------------------------------------------------------*/
-
 import React from 'react';
 import ReactDom from "react-dom/client";
 import App from '@components/App/';

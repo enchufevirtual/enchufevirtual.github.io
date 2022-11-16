@@ -13,7 +13,7 @@ module.exports = {
     },
     mode: 'development',
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.tsx', '.jsx', '.ts', '.js'],
         alias: {
             '@styles': path.resolve(__dirname, './src/styles/'),
             '@components': path.resolve(__dirname, './src/components/'),
@@ -21,13 +21,14 @@ module.exports = {
             '@hooks': path.resolve(__dirname, './hooks/'),
             '@public': path.resolve(__dirname, './public/'),
             '@containers': path.resolve(__dirname, './src/containers/'),
-            '@context': path.resolve(__dirname, './src/context/')
+            '@context': path.resolve(__dirname, './src/context/'),
+            'database': path.resolve(__dirname, './src/database/')
         }
     },
     module: {
         rules: [
             {
-                test: /\.js|\.jsx$/,
+                test: /\.(ts|js)x?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
