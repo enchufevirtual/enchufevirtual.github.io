@@ -1,12 +1,35 @@
+
 import React, { useState, createContext, useEffect, useRef, ReactNode } from "react";
+
+import es from 'translations/es.json';
+import en from 'translations/en.json';
 
 const GlobalContext = createContext({});
 
 const GlobalProvider: React.FC<{}> = ({children}: { children?: ReactNode }) => {
+
   const [active, setActive] = useState(false);
   const [play, setPlay] = useState(false);
   const [load, setLoad] = useState(false);
+  const [language, setLanguage] = useState(false);
+  const [data, setData] = useState([]);
 
+  // Language Dinamic
+  const defaultLanguage = () => {
+    const data = JSON.stringify(en)
+    setData(JSON.parse(data))
+  }
+  const changeLanguage = () => {
+    let data;
+    setLanguage(!language);
+    if (language) {
+      data = JSON.stringify(en)
+      setData(JSON.parse(data))
+    } else {
+      data = JSON.stringify(es)
+      setData(JSON.parse(data))
+    }
+  }
   // Menu Toggle
   const handleMenu = (): void => {
     return (
@@ -60,10 +83,13 @@ const GlobalProvider: React.FC<{}> = ({children}: { children?: ReactNode }) => {
       handleMenu,
       toggleAudio,
       audioRef,
+      data,
       volume,
       play,
       load,
-      active
+      active,
+      changeLanguage,
+      defaultLanguage
     }}>
       {children}
     </GlobalContext.Provider>

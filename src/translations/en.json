@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "p": "Space created to share open source projects, taking knowledge to another level.",
+    "span": "Contact"
+  },
+  "cards": [
+    {
+      "description": "Audio player created in Html, Css and JavaScript, simple and elegant."
+    },
+    {
+      "description": "Scientific calculator, built with Html, Css and JavaScript, intermediate use."
+    },
+    {
+      "description": "This version of windows is created in React, but also has a PHP version."
+    },
+    {
+      "description": "This is a project based on a challenge from FrontenMentor, it has Html, Css and JavaScript."
+    },
+    {
+      "description": "This project was created with Html, Css and JavaScript, site under construction."
+    },
+    {
+      "description": "Image search engine that uses the Pexels API, created in Html, Css and JavaScript."
+    }
+  ]
+}
+
+
+
+

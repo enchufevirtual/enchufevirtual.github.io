@@ -7,12 +7,12 @@ import HeaderSocial from "@components/Header/HeaderSocial";
 import MenuBtn from "@components/Header/MenuBtn";
 
 const Header  = () => {
-  const { active } = useContext(GlobalContext);
+  const { active, defaultLanguage } = useContext(GlobalContext);
 
   const matches = useMediaQuery("(max-width: 768px");
 
   return (
-    <header id="Header">
+    <header id="Header" onLoad={defaultLanguage}>
       <ul className="menu" style={{backgroundColor: active ? '#161B22' : null}}>
         <li className="Ev">
           <a href="https://enchufevirtual.com/">

@@ -1,7 +1,11 @@
-import React from "react";
-import HeroImage from '@images/home.svg'
+import React, { useContext, useEffect } from "react";
+import { GlobalContext } from "@context/GlobalContext";
+import HeroImage from '@images/home.svg';
 
 const Hero = () => {
+  const { data } = useContext(GlobalContext);
+
+  useEffect(() => {}, [data]);
 
   const handleContact = () => {
     window.location.href = "mailto:chendoec@live.com";
@@ -11,10 +15,10 @@ const Hero = () => {
 
     <div id="Hero">
       <div className="Hero_content">
-        <h1>Enchufe Virtual</h1>      
-        <p className="Hero_text">Space created to share open source projects, taking knowledge to another level.</p> 
+        <h1>Enchufe Virtual</h1>
+        <p className="Hero_text">{data?.hero?.p}</p>
         <div onClick={handleContact} className="btn">
-          <span>Contact</span>
+          <span>{data?.hero?.span}</span>
         </div>
       </div>
       <div className="Hero_image">

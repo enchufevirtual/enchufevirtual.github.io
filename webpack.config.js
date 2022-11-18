@@ -22,6 +22,7 @@ module.exports = {
             '@public': path.resolve(__dirname, './public/'),
             '@containers': path.resolve(__dirname, './src/containers/'),
             '@context': path.resolve(__dirname, './src/context/'),
+            'translations': path.resolve(__dirname, './src/translations/'),
             'database': path.resolve(__dirname, './src/database/')
         }
     },

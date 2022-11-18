@@ -31,7 +31,7 @@
       color: $gray;
       text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
     }
-    
+
     img {
       margin: .3rem;
       width: 30px;
@@ -61,6 +61,9 @@
   li:last-child {
     margin-right: 0;
   }
+}
+#Header .menu li:last-child {
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   #Header .menu .Header_social {

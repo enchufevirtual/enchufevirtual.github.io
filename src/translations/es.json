@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "p": "Espacio creado para compartir proyectos de código abierto, llevando el conocimiento a otro nivel.",
+    "span": "Contacto"
+  },
+  "cards": [
+    {
+      "description": "Reproductor de Audio creado en Html, Css y JavaScript, sencillo y elegante."
+    },
+    {
+      "description": "Calculadora científica, construida con Html, Css y JavaScript, uso intermedio."
+    },
+    {
+      "description": "Esta vesión de windows está creada en React, pero también tiene una versión en PHP."
+    },
+    {
+      "description": "Este es un proyecto basado en un desafío de FrontenMentor, Tiene Html, Css y JavaScript."
+    },
+    {
+      "description": "Este proyecto fué creado con Html, Css y JavaScript, sitio en construcción."
+    },
+    {
+      "description": "Buscador de imágenes que usa la API de Pexels, creado en Html, Css y JavaScript."
+    }
+  ]
+}

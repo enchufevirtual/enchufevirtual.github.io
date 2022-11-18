@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { faker } from '@faker-js/faker'
 import { GlobalContext } from "@context/GlobalContext";
 
@@ -7,10 +7,15 @@ import Card from "@containers/Card";
 
 const Main = () => {
   const card = [] ;
-  const { load } = useContext(GlobalContext);
+  const d = []; // Description Save
+  const { load, data } = useContext(GlobalContext);
 
-  database.forEach((data) => {
-    card.push(<Card key={faker.datatype.uuid()} data={data} id={faker.datatype.uuid()} />);
+  useEffect(() => {}, [data])
+
+  data?.cards?.forEach(item => d.push(item.description));
+
+  database.forEach((datos, index) => {
+    card.push(<Card key={faker.datatype.uuid()} datos={datos} id={faker.datatype.uuid()} description={d[index]} />);
   });
 
   return (

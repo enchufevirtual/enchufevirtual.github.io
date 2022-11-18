@@ -1,21 +1,17 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-const Card = ({data, id}) => {
+
+const Card = ({datos, id, description}) => {
+
   const [click, setClick] = useState(false);
   const [over, setOver] = useState(false);
 
-  const handleMouseDown = () => {
-    setClick(true);
-  }
-  const handleMouseAll = () => {
-    setClick(false);
-  }
-  const handleMouseOver = () => {
-    setOver(true);
-  }
-  const handleMouseOut = () => {
-    setOver(false);
-  }
+  // Card Animation - click Over
+  const handleMouseDown = () => ( setClick(true) );
+  const handleMouseAll = () => ( setClick(false) );
+  const handleMouseOver = () => ( setOver(true) );
+  const handleMouseOut = () => ( setOver(false) );
+
   const styles = {
     transform: "translateY(4px) scale(0.95) translateZ(0px)",
     transformOver: "translateY(4px) scale(1.01) translateZ(0px)",
@@ -34,13 +30,13 @@ const Card = ({data, id}) => {
       style={{transform: click ? styles.transform : over ? styles.transformOver: "none"}}
       id={id}
     >
-        <img src={`assets/${data.image}`} alt="imagen" />
+        <img src={`assets/${datos.image}`} alt="imagen" />
         <div className="card-body">
-          <h2>{data.title}</h2>
-          <p>{data.description.substring(0, 70) + '...'}</p>
+          <h2>{datos.title}</h2>
+          <p>{description?.substring(0, 70) + "..."}</p>
           <div className="buttons">
-            <a href={data.source} target="_blank">Source</a>
-            <a href={data.demo} target="_blank">Demo</a>
+            <a href={datos.source} target="_blank">Source</a>
+            <a href={datos.demo} target="_blank">Demo</a>
           </div>
         </div>
     </div>
