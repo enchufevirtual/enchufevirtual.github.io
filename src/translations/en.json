@@ -5,21 +5,27 @@
   },
   "cards": [
     {
+      "title": "Audio Seven",
       "description": "Audio player created in Html, Css and JavaScript, simple and elegant."
     },
     {
+      "title": "Chendo Calc",
       "description": "Scientific calculator, built with Html, Css and JavaScript, intermediate use."
     },
     {
+      "title": "Windows",
       "description": "This version of windows is created in React, but also has a PHP version."
     },
     {
+      "title": "Space",
       "description": "This is a project based on a challenge from FrontenMentor, it has Html, Css and JavaScript."
     },
     {
+      "title": "Devaechba",
       "description": "This project was created with Html, Css and JavaScript, site under construction."
     },
     {
+      "title": "Ace Search",
       "description": "Image search engine that uses the Pexels API, created in Html, Css and JavaScript."
     }
   ]

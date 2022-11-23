@@ -1,12 +1,16 @@
 
-import React, { useState, createContext, useEffect, useRef, ReactNode } from "react";
+import React, { useState, createContext, useEffect, useRef, ReactNode, useReducer } from "react";
 
-import es from 'translations/es.json';
-import en from 'translations/en.json';
+import es from '@translations/es.json';
+import en from '@translations/en.json';
+import { dataReducer, initialState } from "@context/dataReducer";
 
 const GlobalContext = createContext({});
 
 const GlobalProvider: React.FC<{}> = ({children}: { children?: ReactNode }) => {
+
+  // Use Reducer function
+  const [categoryState, dispatch] = useReducer(dataReducer, initialState);
 
   const [active, setActive] = useState(false);
   const [play, setPlay] = useState(false);
@@ -14,6 +18,10 @@ const GlobalProvider: React.FC<{}> = ({children}: { children?: ReactNode }) => {
   const [language, setLanguage] = useState(false);
   const [data, setData] = useState([]);
 
+  // Change Category
+  const changeCategory = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    dispatch({type: e.currentTarget.value, payload: e.currentTarget.value});
+  }
   // Language Dinamic
   const defaultLanguage = () => {
     const data = JSON.stringify(en)
@@ -31,11 +39,7 @@ const GlobalProvider: React.FC<{}> = ({children}: { children?: ReactNode }) => {
     }
   }
   // Menu Toggle
-  const handleMenu = (): void => {
-    return (
-      setActive(!active)
-    );
-  }
+  const handleMenu = (): void =>  ( setActive(!active) );
   // if Load document
   useEffect(() => {
     const onLoad = (): void => {
@@ -80,16 +84,18 @@ const GlobalProvider: React.FC<{}> = ({children}: { children?: ReactNode }) => {
 
   return (
     <GlobalContext.Provider value={{
-      handleMenu,
-      toggleAudio,
       audioRef,
-      data,
+      active,
       volume,
       play,
       load,
-      active,
+      data,
+      handleMenu,
+      toggleAudio,
+      changeCategory,
       changeLanguage,
-      defaultLanguage
+      defaultLanguage,
+      category: categoryState.value,
     }}>
       {children}
     </GlobalContext.Provider>

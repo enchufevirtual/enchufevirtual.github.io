@@ -4,7 +4,7 @@
   color: $gray;
   font-weight: 700;
   font-size: 30px;
-  margin: 4rem .5rem;
+  margin: 4rem 0.5rem 0 0.5rem;
   position: relative;
 }
 #Main span {
@@ -26,6 +26,13 @@
   #Main .title::after {
     width: 20%;
   }
+}
+#Main .Options {
+  margin: 0 0.5rem 4rem 0.5rem;
+}
+#Main .Options select.categories {
+  border: none;
+  outline: none;
 }
 .Main_content {
   display: grid;
