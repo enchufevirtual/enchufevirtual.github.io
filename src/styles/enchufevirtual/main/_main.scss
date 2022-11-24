@@ -26,7 +26,7 @@
   #Main .title::after {
     width: 20%;
   }
-  #Main .Options {
+  #Main .messageError, .Options {
     padding-left: 0.5rem;
   }
 }
@@ -43,6 +43,9 @@
   max-width: 100%;
   gap: 1rem;
   padding-bottom: 70px;
+}
+.Main_content .messageError {
+  margin: 0 0.5rem 4rem 0.5rem;
 }
 @media (max-width: 991px) {
   .Main_content {

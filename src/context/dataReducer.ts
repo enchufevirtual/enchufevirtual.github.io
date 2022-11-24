@@ -1,11 +1,8 @@
 
-import { ActionType } from '@context/type';
+import { ActionType } from '@/context/type';
+import { Category } from '@/interfaces/interfaces';
 
-export const initialState = {
-  value: ''
-}
-
-export const dataReducer = (state: typeof initialState, action: ActionType) => {
+export const dataReducer = (state: Category , action: ActionType) => {
 
   const { type, payload } = action;
 

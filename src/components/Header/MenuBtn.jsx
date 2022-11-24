@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import { GlobalContext } from "@context/GlobalContext";
+import { GlobalContext } from "../../context/GlobalContext";
 
-import HeaderSocial from "@components/Header/HeaderSocial";
+import HeaderSocial from "@/components/Header/HeaderSocial";
 
 const MenuBtn = () => {
 
   const { handleMenu, active } = useContext(GlobalContext);
- 
+
  return (
   <>
   <li onClick={handleMenu} className={active ? "MenuBtn open" : "MenuBtn"}>
@@ -15,7 +15,7 @@ const MenuBtn = () => {
   <HeaderSocial />
   </>
 
- ); 
+ );
 }
 
 export default MenuBtn;

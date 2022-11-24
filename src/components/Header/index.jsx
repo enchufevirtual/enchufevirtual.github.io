@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { GlobalContext } from "@context/GlobalContext";
+import { GlobalContext } from "../../context/GlobalContext";
 import useMediaQuery from "@hooks/useMediaQuery";
 
 import Logo from '@images/logo.png';
-import HeaderSocial from "@components/Header/HeaderSocial";
-import MenuBtn from "@components/Header/MenuBtn";
+import HeaderSocial from "@/components/Header/HeaderSocial";
+import MenuBtn from "@/components/Header/MenuBtn";
 
 const Header  = () => {
   const { active, defaultLanguage } = useContext(GlobalContext);

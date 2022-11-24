@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { GlobalContext } from "@context/GlobalContext";
+import { GlobalContext } from "../../context/GlobalContext";
 import HeroImage from '@images/home.svg';
 
 const Hero = () => {

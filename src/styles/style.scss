@@ -1,13 +1,13 @@
 // global var and customs
-@import '@styles/base/var';
-@import '@styles/base/mixins';
-@import '@styles/base/chendo';
+@import '@/styles/base/var';
+@import '@/styles/base/mixins';
+@import '@/styles/base/chendo';
 
 // Enchufe Virtual - General
-@import '@styles/enchufevirtual/enchufevirtual';
-@import '@styles/enchufevirtual/hero/hero';
-@import '@styles/enchufevirtual/loader/loader';
-@import '@styles/enchufevirtual/header/header';
-@import '@styles/enchufevirtual/menu/menuBtn';
-@import '@styles/enchufevirtual/main/main';
-@import '@styles/enchufevirtual/radio/radio';
+@import '@/styles/enchufevirtual/enchufevirtual';
+@import '@/styles/enchufevirtual/hero/hero';
+@import '@/styles/enchufevirtual/loader/loader';
+@import '@/styles/enchufevirtual/header/header';
+@import '@/styles/enchufevirtual/menu/menuBtn';
+@import '@/styles/enchufevirtual/main/main';
+@import '@/styles/enchufevirtual/radio/radio';

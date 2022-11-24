@@ -15,15 +15,10 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.jsx', '.ts', '.js'],
         alias: {
-            '@styles': path.resolve(__dirname, './src/styles/'),
-            '@components': path.resolve(__dirname, './src/components/'),
+            '@': path.resolve(__dirname, './src'), // alias global
             '@images': path.resolve(__dirname, './public/assets/'),
             '@hooks': path.resolve(__dirname, './hooks/'),
             '@public': path.resolve(__dirname, './public/'),
-            '@containers': path.resolve(__dirname, './src/containers/'),
-            '@context': path.resolve(__dirname, './src/context/'),
-            '@translations': path.resolve(__dirname, './src/translations/'),
-            '@database': path.resolve(__dirname, './src/database/')
         }
     },
     module: {
@@ -72,7 +67,7 @@ module.exports = {
                     to: "assets"
                 }
             ]
-        })
+        }),
     ],
     devServer: {
         historyApiFallback: true

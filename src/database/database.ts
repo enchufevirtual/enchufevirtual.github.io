@@ -1,5 +1,5 @@
 
-import { DataBase } from "@database/database.model";
+import { DataBase } from "@/database/database.model";
 
 export const database: DataBase[] = [
   {
@@ -20,7 +20,7 @@ export const database: DataBase[] = [
     title: "Windows",
     image: "windows.jpg",
     source: "https://github.com/chendodev/Oschen",
-    type: 'BACKEND',
+    type: 'FRONTEND',
     demo: "https://oschen.netlify.app/",
   },
   {

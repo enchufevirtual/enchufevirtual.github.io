@@ -1,6 +1,6 @@
 
 import React, {useContext} from "react";
-import { GlobalContext } from "@context/GlobalContext";
+import { GlobalContext } from "../../context/GlobalContext";
 import EnEs from '@images/btn-es-en.svg';
 
 const HeaderSocial = () => {

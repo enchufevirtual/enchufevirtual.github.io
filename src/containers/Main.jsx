@@ -1,10 +1,10 @@
 import { useContext, useEffect } from "react";
 import { faker } from '@faker-js/faker'
-import { GlobalContext } from "@context/GlobalContext";
+import { GlobalContext }  from "../context/GlobalContext";
 
-import { database } from "@database/database";
-import Card from "@containers/Card";
-import Options from "@containers/Options";
+import { database } from "@/database/database";
+import Card from "@/containers/Card";
+import Options from "@/containers/Options";
 
 const Main = () => {
   const card = [] ;
@@ -14,9 +14,8 @@ const Main = () => {
   useEffect(() => {}, [data])
 
   data?.cards?.forEach(item => d.push(item.description));
-
   // validated categories && push cards
-  if (category == "CATEGORIES" || category == "LIBRARY" || !category) {
+  if (category == "CATEGORIES") {
     database.forEach((datos, index) => {
       card.push(<Card key={faker.datatype.uuid()} datos={datos} id={faker.datatype.uuid()} description={d[index]} />);
     });
@@ -26,12 +25,13 @@ const Main = () => {
       card.push(<Card key={faker.datatype.uuid()} datos={datos} id={faker.datatype.uuid()} description={d[index]} />);
     });
   }
+
   return (
     <div className={{myAnimation: load}} id="Main">
       <div className="title">Open Source <span>Projects</span></div>
       <Options />
       <div className="Main_content">
-        {card}
+        {card.length ? card : <p className="messageError">No results, try another category</p>}
       </div>
     </div>
   );

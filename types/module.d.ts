@@ -1,4 +1,19 @@
-declare module "@context/dataReducer" {
+declare module "@/translations/es.json";
+declare module "@/translations/en.json";
+declare module "@/context/GlobalContext";
+declare module "@/interfaces/interfaces" {
+
+  export interface Category {
+    value: string
+  }
+
+  export interface PropsProvider {
+    children: JSX.Element | JSX.Element[];
+  }
+
+}
+
+declare module "@/context/dataReducer" {
 
   export const initialState = {
     value: ''
@@ -35,10 +50,8 @@ declare module "@context/dataReducer" {
   }
 
 };
-declare module "@translations/es.json";
-declare module "@translations/en.json";
 
-declare module '@context/type' {
+declare module '@/context/type' {
 
   export type ActionType =
   | { type: 'CATEGORIES', payload: string }
@@ -47,7 +60,7 @@ declare module '@context/type' {
   | { type: 'LIBRARY', payload: string }
 
 };
-declare module '@database/database.model' {
+declare module '@/database/database.model' {
 
     interface DataBase {
     title: string;
