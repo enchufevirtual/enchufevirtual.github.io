@@ -15,7 +15,11 @@ const Main = () => {
 
   data?.cards?.forEach(item => d.push(item.description));
   // validated categories && push cards
+<<<<<<< HEAD
+  if (category == "CATEGORIES" || !category) {
+=======
   if (category == "CATEGORIES") {
+>>>>>>> 46eb5fa (Organizing files, so they are easier to find)
     database.forEach((datos, index) => {
       card.push(<Card key={faker.datatype.uuid()} datos={datos} id={faker.datatype.uuid()} description={d[index]} />);
     });
