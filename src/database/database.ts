@@ -19,9 +19,9 @@ export const database: DataBase[] = [
   {
     title: "Windows",
     image: "windows.jpg",
-    source: "https://github.com/chendodev/Oschen",
+    source: "https://github.com/chendodev/oschen",
     type: 'FRONTEND',
-    demo: "https://oschen.netlify.app/",
+    demo: "https://chendo.dev/oschen",
   },
   {
     title: "Space",
