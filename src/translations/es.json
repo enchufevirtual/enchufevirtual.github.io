@@ -27,6 +27,22 @@
     {
       "title": "Ace Search",
       "description": "Buscador de imágenes que usa la API de Pexels, creado en Html, Css y JavaScript."
+    },
+    {
+      "title": "dotenv.core",
+      "description": "dotenv.core es una biblioteca de clases para leer y analizar archivos .env en .NET Core"
+    },
+    {
+      "title": "seztion-parser.net",
+      "description": "seztion-parser es una biblioteca de clases que se utiliza para leer datos de cada sección de un archivo (la extensión del archivo puede ser cualquiera, por ejemplo, .INI)."
+    },
+    {
+      "title": "Capture The Flag SA-MP",
+      "description": "Capture The Flag es un modo de juego para SA-MP creado con .NET/C# y SampSharp.net"
+    },
+    {
+      "title": "DentallApp BackEnd",
+      "description": "Un servicio web para el software dental que permite programar citas y enviar recordatorios automáticos de citas a los pacientes."
     }
   ]
 }
