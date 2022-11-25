@@ -43,5 +43,33 @@ export const database: DataBase[] = [
     source: "https://github.com/chendodev/asi",
     type: 'FRONTEND',
     demo: "https://asi-one.vercel.app/",
+  },
+  {
+    title: "dotenv.core",
+    image: "dotenv.core.jpg",
+    source: "https://github.com/MrDave1999/dotenv.core",
+    type: 'LIBRARY',
+    demo: "https://github.com/MrDave1999/dotenv.core",
+  },
+  {
+    title: "seztion-parser.net",
+    image: "seztion-parser.jpg",
+    source: "https://github.com/MrDave1999/seztion-parser",
+    type: 'LIBRARY',
+    demo: "https://github.com/MrDave1999/seztion-parser",
+  },
+  {
+    title: "Capture The Flag SA-MP",
+    image: "CTF.jpg",
+    source: "https://github.com/MrDave1999/Capture-The-Flag",
+    type: 'BACKEND',
+    demo: "https://github.com/MrDave1999/Capture-The-Flag",
+  },
+  {
+    title: "DentallApp BackEnd",
+    image: "dentall-app-backend.jpg",
+    source: "https://github.com/DentallApp/back-end",
+    type: 'BACKEND',
+    demo: "https://github.com/DentallApp/back-end",
   }
 ]
