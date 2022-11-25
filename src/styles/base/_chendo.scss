@@ -3,10 +3,10 @@
     Name: Enchufe Virtual
     Theme URI: @enchufevirtual
     Description: Open Source Projects - Enchufe virtual
-    Author: @chendoio - chendo | developer and web designer
+    Author: @chendodev - chendo | developer and web designer
     Author URI: https://facebook.com/chendoio
-    Github: https://github.com/chendoio
-    Youtube: https://youtube.com/chendoio
+    Github: https://github.com/chendodev
+    Youtube: https://youtube.com/@chendodev
 
 -----------------------------------------------------------------------------------*/
 /* <---- Style Chendo Dev ----> */
@@ -29,7 +29,7 @@ body {
 }
 /* <---- Scroll ----> */
 * { scrollbar-width:thin; }
-:root { 
+:root {
     scrollbar-color: $scroll, $card !important;
 }
 /* <---- Works on Chrome, Edge, and Safari ----> */
@@ -42,7 +42,7 @@ body {
 }
 *::-webkit-scrollbar-thumb {
     background-color: $scroll;
-} 
+}
 @media (max-width: 768px) {
 ::-webkit-scrollbar {display: none;}
 }

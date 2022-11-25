@@ -3,10 +3,10 @@
     Name: Enchufe Virtual
     Theme URI: @enchufevirtual
     Description: Open Source Projects - Enchufe virtual
-    Author: @chendoio - chendo | developer and web designer
+    Author: @chendodev - chendo | developer and web designer
     Author URI: https://facebook.com/chendoio
-    Github: https://github.com/chendoio
-    Youtube: https://youtube.com/chendoio
+    Github: https://github.com/chendodev
+    Youtube: https://youtube.com/@chendodev
 
 -----------------------------------------------------------------------------------*/
 import React from 'react';
