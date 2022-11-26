@@ -61,6 +61,9 @@
   }
 }
 @media (max-width: 480px) {
+  #Main .title p {
+    font-size: 20px;
+  }
   .Main_content {
     grid-template-columns: 1fr;
     width: 100vw;
