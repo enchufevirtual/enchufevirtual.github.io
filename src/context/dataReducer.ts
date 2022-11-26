@@ -1,6 +1,8 @@
 
 import { ActionType } from '@/context/type';
 import { GlobalValue } from '@/interfaces/interfaces';
+import { en } from '@/translations/en';
+import { es } from '@/translations/es';
 
 export const dataReducer = (state: GlobalValue , action: ActionType) => {
 
@@ -30,12 +32,14 @@ export const dataReducer = (state: GlobalValue , action: ActionType) => {
     case 'en':
       return {
         ...state,
-        language: payload
+        language: payload,
+        data: state.data = en
       }
     case 'es':
       return {
         ...state,
-        language: payload
+        language: payload,
+        data: state.data = es
       }
     default:
       return state;

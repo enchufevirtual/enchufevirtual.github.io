@@ -1,17 +1,21 @@
-declare module "@/translations/es.json";
-declare module "@/translations/en.json";
+declare module "@/translations/es";
+declare module "@/translations/en";
 declare module "@/context/GlobalContext";
 declare module "@/interfaces/interfaces" {
 
   export interface GlobalValue {
     value: string;
     language: string;
+    data: Translations;
   }
-
   export interface PropsProvider {
     children: JSX.Element | JSX.Element[];
   }
-
+  export interface Translations {
+    hero: Props;
+    main: Props;
+    radio: Props
+  }
 }
 
 declare module "@/context/dataReducer" {
@@ -19,6 +23,22 @@ declare module "@/context/dataReducer" {
   export const initialState = {
     value: 'CATEGORIES',
     language: 'en',
+    data: {
+      hero: {
+        p: `Space created to share open source projects,
+        taking knowledge to another level.`,
+        span: 'Contact'
+      },
+      main: {
+        p: "Open Source",
+        span: "Projects",
+        label: "Categories"
+      },
+      radio: {
+        p: `May life not end without leaving traces,
+          every moment you toast is a story to remember.`
+      }
+    }
   }
 
   export const dataReducer = (state: typeof initialState, action: ActionType) => {
@@ -49,12 +69,14 @@ declare module "@/context/dataReducer" {
       case 'en':
         return {
           ...state,
-          language: payload
+          language: payload,
+          data: state.data = en
         }
       case 'es':
         return {
           ...state,
-          language: payload
+          language: payload,
+          data: state.data = es
         }
       default:
         return state;
@@ -72,6 +94,15 @@ declare module '@/context/type' {
   | { type: 'LIBRARY', payload: string }
   | { type: 'en', payload: string}
   | { type: 'es', payload: string}
+
+  export type Props = {
+    p?: string;
+    a?: string;
+    span?: string;
+    title?: string;
+    label?: string;
+    option?: string;
+  }
 
 };
 declare module '@/database/database.model' {

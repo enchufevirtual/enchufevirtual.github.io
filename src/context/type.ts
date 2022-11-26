@@ -6,5 +6,11 @@ export type ActionType =
 | { type: 'en', payload: string }
 | { type: 'es', payload: string }
 
-
-
+export type Props = {
+  p?: string;
+  a?: string;
+  span?: string;
+  title?: string;
+  label?: string;
+  option?: string;
+}

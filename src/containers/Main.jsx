@@ -8,13 +8,13 @@ import Options from "@/containers/Options";
 
 const Main = () => {
   const card = [] ;
-  const { load, globalValue, language } = useContext(GlobalContext);
+  const { load, globalValue, data, language } = useContext(GlobalContext);
 
-  const en = <p>Open Source <span>Projects</span></p>;
-  const es = <p><span>Proyectos</span> de Código Abierto</p>;
-
-  const title = language == 'es' ? (es) : (en);
-
+  const title = language == 'es' ? (
+      <p><span>{data.main.span}</span> {data.main.p}</p>
+    ) : (
+      <p>{data.main.p} <span>{data.main.span}</span></p>
+    );
   // validated categories && push cards
   if (globalValue == "CATEGORIES") {
     database.forEach(data => {
@@ -29,7 +29,7 @@ const Main = () => {
 
   return (
     <div className={{myAnimation: load}} id="Main">
-      <div className="title">{ title }</div>
+      <div className="title">{title}</div>
       <Options />
       <div className="Main_content">
         {card.length ? card : <p className="messageError">No results, try another category</p>}

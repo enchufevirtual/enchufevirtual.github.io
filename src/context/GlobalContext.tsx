@@ -1,3 +1,4 @@
+import { Translations } from "@/interfaces/interfaces";
 import { createContext } from "react";
 
 type ContextProps = {
@@ -7,6 +8,7 @@ type ContextProps = {
   play: boolean;
   load: boolean;
   language: string;
+  data: Translations;
   handleMenu: () => void;
   toggleAudio: () => void;
   changeCategory: () => Promise<void>;
