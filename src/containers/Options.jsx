@@ -14,7 +14,7 @@ const Options = () => {
     <div className="Options">
       <label>{ category }</label>
       <select onChange={changeCategory} value={globalValue}  className="categories">
-        <option value="CATEGORIES">All</option>
+        <option value="CATEGORIES">{ language == 'es' ? "Todos" : "All" }</option>
         <option className="option" value="FRONTEND">Frontend</option>
         <option className="option" value="BACKEND">Backend</option>
         <option className="option" value="LIBRARY">Library</option>

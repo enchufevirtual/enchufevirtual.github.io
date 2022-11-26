@@ -6,6 +6,7 @@ import Header from "@/components/Header/";
 import Radio from "@/components/Radio/";
 import Main from "@/containers/Main";
 import Loader from "@/components/loader/";
+import Footer from "@/components/Footer";
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
         <Header />
         <Main />
         <Radio />
+        <Footer />
       </GlobalProvider>
     </>
     )
