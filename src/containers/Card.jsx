@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { GlobalContext } from "../context/GlobalContext";
 
 
-const Card = ({datos, id, description}) => {
+const Card = ({data, id}) => {
+
+  const { language } = useContext(GlobalContext);
 
   const [click, setClick] = useState(false);
   const [over, setOver] = useState(false);
@@ -30,13 +33,18 @@ const Card = ({datos, id, description}) => {
       style={{transform: click ? styles.transform : over ? styles.transformOver: "none"}}
       id={id}
     >
-        <img src={`assets/${datos.image}`} alt="imagen" />
+        <img src={`assets/${data.image}`} alt="imagen" />
         <div className="card-body">
-          <h2>{datos.title}</h2>
-          <p>{description?.substring(0, 70) + "..."}</p>
+          <h2>{data.title}</h2>
+          <p>{
+              language == 'es'
+                ? (data.description_es?.substring(0, 70) + "...")
+                : (data.description_en?.substring(0, 70) + "...")
+              }
+          </p>
           <div className="buttons">
-            <a href={datos.source} target="_blank">Source</a>
-            <a href={datos.demo} target="_blank">Demo</a>
+            <a href={data.source} target="_blank">Source</a>
+            <a href={data.demo} target="_blank">Demo</a>
           </div>
         </div>
     </div>

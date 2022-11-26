@@ -6,13 +6,12 @@ type ContextProps = {
   volume: (e: React.ChangeEvent<HTMLInputElement>) => void;
   play: boolean;
   load: boolean;
-  data: [];
+  language: string;
   handleMenu: () => void;
   toggleAudio: () => void;
   changeCategory: () => Promise<void>;
   changeLanguage: () => void;
-  defaultLanguage: () => void,
-  category: string,
+  globalValue: string,
 }
 
 const GlobalContext = createContext<ContextProps>({} as ContextProps);

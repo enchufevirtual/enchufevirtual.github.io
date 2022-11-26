@@ -4,5 +4,7 @@ export interface DataBase {
   image: string;
   source: string;
   type: string;
-  demo: string
+  demo: string;
+  description_en: string;
+  description_es: string;
 }

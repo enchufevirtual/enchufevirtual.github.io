@@ -3,8 +3,9 @@ declare module "@/translations/en.json";
 declare module "@/context/GlobalContext";
 declare module "@/interfaces/interfaces" {
 
-  export interface Category {
-    value: string
+  export interface GlobalValue {
+    value: string;
+    language: string;
   }
 
   export interface PropsProvider {
@@ -16,7 +17,8 @@ declare module "@/interfaces/interfaces" {
 declare module "@/context/dataReducer" {
 
   export const initialState = {
-    value: ''
+    value: 'CATEGORIES',
+    language: 'en',
   }
 
   export const dataReducer = (state: typeof initialState, action: ActionType) => {
@@ -44,6 +46,16 @@ declare module "@/context/dataReducer" {
           ...state,
           value: payload
         }
+      case 'en':
+        return {
+          ...state,
+          language: payload
+        }
+      case 'es':
+        return {
+          ...state,
+          language: payload
+        }
       default:
         return state;
     }
@@ -58,16 +70,20 @@ declare module '@/context/type' {
   | { type: 'FRONTEND', payload: string }
   | { type: 'BACKEND', payload: string }
   | { type: 'LIBRARY', payload: string }
+  | { type: 'en', payload: string}
+  | { type: 'es', payload: string}
 
 };
 declare module '@/database/database.model' {
 
     interface DataBase {
-    title: string;
-    image: string;
-    source: string;
-    type: string;
-    demo: string
+      title: string;
+      image: string;
+      source: string;
+      type: string;
+      demo: string;
+      description_en: string;
+      description_es: string;
   }
 
 };

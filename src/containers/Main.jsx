@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { faker } from '@faker-js/faker'
 import { GlobalContext }  from "../context/GlobalContext";
 
@@ -8,27 +8,28 @@ import Options from "@/containers/Options";
 
 const Main = () => {
   const card = [] ;
-  const d = []; // Description Save
-  const { load, data, category } = useContext(GlobalContext);
+  const { load, globalValue, language } = useContext(GlobalContext);
 
-  useEffect(() => {}, [data])
+  const en = <p>Open Source <span>Projects</span></p>;
+  const es = <p><span>Proyectos</span> de Código Abierto</p>;
 
-  data?.cards?.forEach(item => d.push(item.description));
+  const title = language == 'es' ? (es) : (en);
+
   // validated categories && push cards
-  if (category == "CATEGORIES") {
-    database.forEach((datos, index) => {
-      card.push(<Card key={faker.datatype.uuid()} datos={datos} id={faker.datatype.uuid()} description={d[index]} />);
+  if (globalValue == "CATEGORIES") {
+    database.forEach(data => {
+      card.push(<Card key={faker.datatype.uuid()} data={data} id={faker.datatype.uuid()} />);
     });
   } else {
-    let db = database.filter(type => type.type == category);
-    db.forEach((datos, index) => {
-      card.push(<Card key={faker.datatype.uuid()} datos={datos} id={faker.datatype.uuid()} description={d[index]} />);
+    let db = database.filter(type => type.type == globalValue);
+    db.forEach(data => {
+      card.push(<Card key={faker.datatype.uuid()} data={data} id={faker.datatype.uuid()} />);
     });
   }
 
   return (
     <div className={{myAnimation: load}} id="Main">
-      <div className="title">Open Source <span>Projects</span></div>
+      <div className="title">{ title }</div>
       <Options />
       <div className="Main_content">
         {card.length ? card : <p className="messageError">No results, try another category</p>}

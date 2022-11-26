@@ -1,5 +1,5 @@
 
-#Main .title {
+#Main .title p {
   font-family: $font-primary;
   color: $gray;
   font-weight: 700;
@@ -10,7 +10,7 @@
 #Main span {
   color: $primary;
 }
-#Main .title::after {
+#Main .title p::after {
   content: '';
   position: absolute;
   width: 40%;
@@ -23,7 +23,7 @@
     font-size: 24px;
     padding-left: 0.5rem;
   }
-  #Main .title::after {
+  #Main .title p::after {
     width: 20%;
   }
   #Main .messageError, .Options {
@@ -32,10 +32,13 @@
 }
 #Main .Options {
   margin: 0 0.5rem 4rem 0.5rem;
+  display: flex;
+  flex-direction: column;
 }
 #Main .Options select.categories {
   border: none;
   outline: none;
+  width: 100px;
 }
 .Main_content {
   display: grid;

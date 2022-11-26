@@ -1,8 +1,8 @@
 
 import { ActionType } from '@/context/type';
-import { Category } from '@/interfaces/interfaces';
+import { GlobalValue } from '@/interfaces/interfaces';
 
-export const dataReducer = (state: Category , action: ActionType) => {
+export const dataReducer = (state: GlobalValue , action: ActionType) => {
 
   const { type, payload } = action;
 
@@ -26,6 +26,16 @@ export const dataReducer = (state: Category , action: ActionType) => {
       return {
         ...state,
         value: payload
+      }
+    case 'en':
+      return {
+        ...state,
+        language: payload
+      }
+    case 'es':
+      return {
+        ...state,
+        language: payload
       }
     default:
       return state;

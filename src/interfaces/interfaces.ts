@@ -1,5 +1,6 @@
-export interface Category {
-  value: string
+export interface GlobalValue {
+  value: string;
+  language: string;
 }
 
 export interface PropsProvider {

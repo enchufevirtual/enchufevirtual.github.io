@@ -4,7 +4,14 @@ import { GlobalContext } from "../../context/GlobalContext";
 
 const Radio = () => {
 
-  const { toggleAudio, volume, play, audioRef } = useContext(GlobalContext);
+  const { toggleAudio, volume, play, audioRef, language } = useContext(GlobalContext);
+
+  const en = `May life not end without leaving traces,
+                      every moment you toast is a story to remember.`;
+  const es = `Que la vida no termine sin dejar huellas,
+                      Cada momento que brindas es una historia para recordar.`;
+
+  const phrachen = language == 'es' ? (es) : (en);
 
   return (
     <div className="Radio">
@@ -27,10 +34,10 @@ const Radio = () => {
             loop="infinite"
             hspace="10px"
             vspace="5px">
-              <p>May life not end without leaving traces, every moment you toast is a story to remember.</p>
+              <p>{ phrachen }</p>
           </marquee>
           <div  className="volumen">
-              <input onInput={volume} type="range" name="volumen" id="volumen" min="0" max="1" step="0.01" defaultValue="0.7" />
+              <input onInput={ volume } type="range" name="volumen" id="volumen" min="0" max="1" step="0.01" defaultValue="0.7" />
           </div>
       </div>
     </div>

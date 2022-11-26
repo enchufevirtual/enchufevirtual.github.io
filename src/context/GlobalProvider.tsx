@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef, useReducer } from "react";
 
-import es from '@/translations/es.json';
-import en from '@/translations/en.json';
 import { GlobalContext } from "@/context/GlobalContext";
 import { dataReducer } from "@/context/dataReducer";
 import { PropsProvider } from "@/interfaces/interfaces";
@@ -9,36 +7,23 @@ import { PropsProvider } from "@/interfaces/interfaces";
 const GlobalProvider = ({children}: PropsProvider) => {
 
   const INITIAL_STATE = {
-    value: 'CATEGORIES'
+    value: 'CATEGORIES',
+    language: 'en',
   }
   // Use Reducer function
-  const [categoryState, dispatch] = useReducer(dataReducer, INITIAL_STATE);
+  const [globalState, dispatch] = useReducer(dataReducer, INITIAL_STATE);
 
   const [active, setActive] = useState(false);
   const [play, setPlay] = useState(false);
   const [load, setLoad] = useState(false);
-  const [language, setLanguage] = useState(false);
-  const [data, setData] = useState([]);
 
   // Change Category
   const changeCategory = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    dispatch({type: e.currentTarget.value, payload: e.currentTarget.value});
+    dispatch( { type: e.currentTarget.value, payload: e.currentTarget.value } );
   }
   // Language Dinamic
-  const defaultLanguage = () => {
-    const data = JSON.stringify(en)
-    setData(JSON.parse(data))
-  }
-  const changeLanguage = () => {
-    let data;
-    setLanguage(!language);
-    if (language) {
-      data = JSON.stringify(en)
-      setData(JSON.parse(data))
-    } else {
-      data = JSON.stringify(es)
-      setData(JSON.parse(data))
-    }
+  const changeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    dispatch( { type:  e.currentTarget.value, payload: e.currentTarget.value } );
   }
   // Menu Toggle
   const handleMenu = () => ( setActive(!active) );
@@ -91,13 +76,12 @@ const GlobalProvider = ({children}: PropsProvider) => {
       volume,
       play,
       load,
-      data,
       handleMenu,
       toggleAudio,
       changeCategory,
       changeLanguage,
-      defaultLanguage,
-      category: categoryState.value,
+      globalValue: globalState.value,
+      language: globalState.language,
     }}>
       {children}
     </GlobalContext.Provider>
