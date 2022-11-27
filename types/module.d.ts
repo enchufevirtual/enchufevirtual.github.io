@@ -21,24 +21,9 @@ declare module "@/interfaces/interfaces" {
 declare module "@/context/dataReducer" {
 
   export const initialState = {
-    value: 'CATEGORIES',
-    language: 'en',
-    data: {
-      hero: {
-        p: `Space created to share open source projects,
-        taking knowledge to another level.`,
-        span: 'Contact'
-      },
-      main: {
-        p: "Open Source",
-        span: "Projects",
-        label: "Categories"
-      },
-      radio: {
-        p: `May life not end without leaving traces,
-          every moment you toast is a story to remember.`
-      }
-    }
+    value: '',
+    language: '',
+    data: {}
   }
 
   export const dataReducer = (state: typeof initialState, action: ActionType) => {
@@ -82,7 +67,6 @@ declare module "@/context/dataReducer" {
         return state;
     }
   }
-
 };
 
 declare module '@/context/type' {
