@@ -3,12 +3,14 @@ import React, { useState, useEffect, useRef, useReducer } from "react";
 import { GlobalContext } from "@/context/GlobalContext";
 import { dataReducer } from "@/context/dataReducer";
 import { PropsProvider } from "@/interfaces/interfaces";
+import { en } from "@/translations/en";
 
 const GlobalProvider = ({children}: PropsProvider) => {
 
   const INITIAL_STATE = {
     value: 'CATEGORIES',
     language: 'en',
+    data: en
   }
   // Use Reducer function
   const [globalState, dispatch] = useReducer(dataReducer, INITIAL_STATE);
@@ -82,6 +84,7 @@ const GlobalProvider = ({children}: PropsProvider) => {
       changeLanguage,
       globalValue: globalState.value,
       language: globalState.language,
+      data: globalState.data
     }}>
       {children}
     </GlobalContext.Provider>

@@ -8,12 +8,7 @@ import Options from "@/containers/Options";
 
 const Main = () => {
   const card = [] ;
-  const { load, globalValue, language } = useContext(GlobalContext);
-
-  const en = <p>Open Source <span>Projects</span></p>;
-  const es = <p><span>Proyectos</span> de Código Abierto</p>;
-
-  const title = language == 'es' ? (es) : (en);
+  const { load, globalValue, data } = useContext(GlobalContext);
 
   // validated categories && push cards
   if (globalValue == "CATEGORIES") {
@@ -29,7 +24,7 @@ const Main = () => {
 
   return (
     <div className={{myAnimation: load}} id="Main">
-      <div className="title">{ title }</div>
+      <div className="title">{data.main.p}</div>
       <Options />
       <div className="Main_content">
         {card.length ? card : <p className="messageError">No results, try another category</p>}

@@ -3,18 +3,13 @@ import { GlobalContext } from "../context/GlobalContext";
 
 const Options = () => {
 
-  const { changeCategory, globalValue, language } = useContext(GlobalContext);
-
-  const en = 'Categories';
-  const es = 'Categorías';
-
-  const category = language == 'es' ? (es) : (en);
+  const { changeCategory, globalValue, data } = useContext(GlobalContext);
 
   return (
     <div className="Options">
-      <label>{ category }</label>
+      <label>{ data.main.label }</label>
       <select onChange={changeCategory} value={globalValue}  className="categories">
-        <option value="CATEGORIES">{ language == 'es' ? "Todos" : "All" }</option>
+        <option value="CATEGORIES">{ data.main.option }</option>
         <option className="option" value="FRONTEND">Frontend</option>
         <option className="option" value="BACKEND">Backend</option>
         <option className="option" value="LIBRARY">Library</option>
