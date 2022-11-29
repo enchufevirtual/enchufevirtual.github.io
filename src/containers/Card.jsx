@@ -6,12 +6,12 @@ const Card = ({data, id}) => {
 
   const { language } = useContext(GlobalContext);
 
-  const [click, setClick] = useState(false);
+  const [mount, setMount] = useState(false);
   const [over, setOver] = useState(false);
 
-  // Card Animation - click Over
-  const handleMouseDown = () => ( setClick(true) );
-  const handleMouseAll = () => ( setClick(false) );
+  // Card Animation - mount - mouse - click - over
+  const handleMouseDown = () => ( setMount(true) );
+  const handleMouseAll = () => ( setMount(false) );
   const handleMouseOver = () => ( setOver(true) );
   const handleMouseOut = () => ( setOver(false) );
 
@@ -30,7 +30,7 @@ const Card = ({data, id}) => {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
       className="card"
-      style={{transform: click ? styles.transform : over ? styles.transformOver: "none"}}
+      style={{transform: mount ? styles.transform : over ? styles.transformOver: "none"}}
       id={id}
     >
         <img src={`assets/${data.image}`} alt="imagen" />
