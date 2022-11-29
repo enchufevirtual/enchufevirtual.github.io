@@ -7,8 +7,7 @@ export const en: Translations = {
     span: 'Contact'
   },
   main: {
-    p: "Open Source",
-    span: "Projects",
+    p: "Open Source Projects",
     label: "Categories",
     option: "All"
   },
