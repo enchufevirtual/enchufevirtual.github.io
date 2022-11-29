@@ -24,7 +24,7 @@ const Main = () => {
 
   return (
     <div className={{myAnimation: load}} id="Main">
-      <div className="title">{data.main.p}</div>
+      <div className="title"><p>{data.main.p}</p></div>
       <Options />
       <div className="Main_content">
         {card.length ? card : <p className="messageError">No results, try another category</p>}
