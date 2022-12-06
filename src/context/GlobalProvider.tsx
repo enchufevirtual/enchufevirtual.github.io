@@ -71,21 +71,32 @@ const GlobalProvider = ({children}: PropsProvider) => {
 
   }
 
+  const radioContext = {
+    audioRef,
+    volume,
+    play,
+    toggleAudio,
+  }
+  const languageContext = {
+    language: globalState.language,
+    changeLanguage,
+    changeCategory,
+    globalValue: globalState.value,
+    data: globalState.data
+  }
+  const siteContext = {
+    active,
+    load,
+    handleMenu,
+  }
+  const globalContext = {
+    ...radioContext,
+    ...languageContext,
+    ...siteContext
+  }
+
   return (
-    <GlobalContext.Provider value={{
-      audioRef,
-      active,
-      volume,
-      play,
-      load,
-      handleMenu,
-      toggleAudio,
-      changeCategory,
-      changeLanguage,
-      globalValue: globalState.value,
-      language: globalState.language,
-      data: globalState.data
-    }}>
+    <GlobalContext.Provider value={globalContext}>
       {children}
     </GlobalContext.Provider>
   );
