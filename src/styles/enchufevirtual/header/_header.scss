@@ -2,7 +2,7 @@
 
 #Header .menu {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   background-color: rgba($background, 0.7);
   backdrop-filter: blur(7px);
   border-bottom: $border;
@@ -15,7 +15,6 @@
 
   li {
     display: flex;
-    justify-content: center;
     align-items: center;
     list-style: none;
     position: relative;
@@ -30,6 +29,13 @@
       font-size: 14px;
       color: $gray;
       text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
+
+      svg {
+        width: 30px;
+        height: 30px;
+        margin: 4px;
+        margin-right: 10px;
+      }
     }
 
     img {

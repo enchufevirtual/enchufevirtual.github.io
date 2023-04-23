@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
-import HeroImage from '@images/home.svg';
+import HeroSvg from "./Hero";
 
 const Hero = () => {
   const { data } = useContext(GlobalContext);
@@ -20,7 +20,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="Hero_image">
-        <img src={ HeroImage } alt="Hero image" />
+        <HeroSvg />
       </div>
     </div>
 
