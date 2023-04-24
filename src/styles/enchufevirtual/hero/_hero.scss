@@ -40,16 +40,15 @@
   position: relative;
   margin: 0 auto;
   width: $btn-w;
-  color: $solid;
-  background-color: $btn-background;
+  color: $background;
+  background-color: $primary;
   transition: all .3s ease-in-out;
-  border: 1px solid $primary;
-  border-radius: 5em;
+  border-radius: 6px;
   text-align: center;
   margin-top: 1rem;
   font-size: 1.3em;
   line-height: 2em;
-  cursor: pointer;  
+  cursor: pointer;
   }
   @media (max-width: 991px) {
     .btn {
