@@ -19,9 +19,11 @@ const Radio = () => {
         // Generar un identificador único para la URL de transmisión
         const uniqueId = Date.now().toString();
         streamUrl = `https://stream.zeno.fm/ezj7hvwkfk2tv?cache=${uniqueId}`;
-        // Actualizar la URL de transmisión
-        audioElement.src = streamUrl;
-        audioElement.load();
+        // Actualizar la URL de transmisión solo si no ha finalizado
+        if (!audioElement.ended) {
+          audioElement.src = streamUrl;
+          audioElement.load();
+        }
         audioElement.play();
         isPlaying = false;
       }
@@ -31,6 +33,7 @@ const Radio = () => {
       clearInterval(checkAudioStatus);
     };
   }, []);
+
   return (
     <div className="Radio">
       <audio ref={audioRef} src="https://stream.zeno.fm/ezj7hvwkfk2tv" type="audio/mpeg" />
