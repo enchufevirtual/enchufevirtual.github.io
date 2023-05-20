@@ -1,16 +1,44 @@
 
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
 
 const Radio = () => {
 
   const { toggleAudio, volume, play, audioRef, data } = useContext(GlobalContext);
 
+  useEffect(() => {
+    const audioElement = audioRef.current;
+    let isPlaying = false;
+    let streamUrl = 'https://stream.zeno.fm/ezj7hvwkfk2tv'; // URL de transmisión inicial
+
+    const checkAudioStatus = setInterval(() => {
+      if (!audioElement.paused) {
+        isPlaying = true;
+      } else if (isPlaying) {
+        console.log("El audio se ha detenido");
+        audioElement.pause();
+
+        // Generar un identificador único para la URL de transmisión
+        const uniqueId = Date.now().toString();
+        streamUrl = `https://stream.zeno.fm/ezj7hvwkfk2tv?cache=${uniqueId}`;
+
+        // Actualizar la URL de transmisión
+        audioElement.src = streamUrl;
+        audioElement.load();
+        audioElement.play();
+
+        isPlaying = false;
+      }
+    }, 5000);
+
+    return () => {
+      clearInterval(checkAudioStatus);
+    };
+  }, []);
   return (
     <div className="Radio">
-      <audio ref={audioRef}>
-          <source src="https://stream.zeno.fm/ezj7hvwkfk2tv" type="audio/mpeg" />
-      </audio>
+      <audio ref={audioRef} src="https://stream.zeno.fm/ezj7hvwkfk2tv" type="audio/mpeg" />
+
       <div className="controls">
           <button onClick={() => toggleAudio()} className="background-play">
               <span className={play ? "play active" : "play"}></span>
