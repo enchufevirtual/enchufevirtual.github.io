@@ -15,21 +15,17 @@ const Radio = () => {
       if (!audioElement.paused) {
         isPlaying = true;
       } else if (isPlaying) {
-        console.log("El audio se ha detenido");
         audioElement.pause();
-
         // Generar un identificador único para la URL de transmisión
         const uniqueId = Date.now().toString();
         streamUrl = `https://stream.zeno.fm/ezj7hvwkfk2tv?cache=${uniqueId}`;
-
         // Actualizar la URL de transmisión
         audioElement.src = streamUrl;
         audioElement.load();
         audioElement.play();
-
         isPlaying = false;
       }
-    }, 5000);
+    }, 3000);
 
     return () => {
       clearInterval(checkAudioStatus);
