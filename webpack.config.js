@@ -44,7 +44,7 @@ module.exports = {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'public/[name].[hash][ext]'
+                    filename: 'src/public/[name].[hash][ext]'
                 }
             },
             {
@@ -63,7 +63,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, "public", "assets"),
+                    from: path.resolve(__dirname, "src/public", "assets"),
                     to: "assets"
                 }
             ]

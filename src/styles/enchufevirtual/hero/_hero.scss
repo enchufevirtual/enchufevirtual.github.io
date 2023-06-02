@@ -8,7 +8,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
-    margin: 8rem auto;
+    height: 100%;
+    width: 100%;
   }
 }
 .Hero_content h1 {
