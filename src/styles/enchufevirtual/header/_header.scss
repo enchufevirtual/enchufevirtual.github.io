@@ -5,9 +5,8 @@
   grid-template-columns: repeat(2, 1fr);
   background-color: rgba($background, 0.7);
   backdrop-filter: blur(7px);
-  border-bottom: $border;
   width: 100%;
-  padding: .2rem .5rem;
+  padding: .5rem;
   position: fixed;
   z-index: 3;
   top: 0;
