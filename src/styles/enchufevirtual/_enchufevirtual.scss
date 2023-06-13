@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-// body content 
+// body content
 body {
   background-color: $background;
   color: $solid;
@@ -11,6 +11,7 @@ body {
   place-content: center;
   place-items: center;
   width: 95%;
+  max-width: 1400px;
   margin: 0 auto;
   height: 100vh;
 }

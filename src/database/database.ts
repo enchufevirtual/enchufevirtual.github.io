@@ -3,6 +3,15 @@ import { DataBase } from "@/database/database.model";
 
 export const database: DataBase[] = [
   {
+    title: "Radio Ev",
+    image: "radioev.jpg",
+    source: "https://github.com/orgs/enchufevirtual/repositories",
+    type: 'FRONTEND',
+    demo: "https://radio.enchufevirtual.com/",
+    description_en: "This Open Source project is an application to enjoy the best music of the moment and connect with people from different parts of the world through an integrated chat.",
+    description_es: "Este proyecto Open Source es una aplicación para disfrutar de la mejor música del momento y conectar con personas de diferentes partes del mundo a través de un chat integrado."
+  },
+  {
     title: "Audio Seven",
     image: "audioseven.jpg",
     source: "https://github.com/chendodev/audioseven",
