@@ -1,7 +1,7 @@
 import { Translations } from "@/interfaces/interfaces";
 import { createContext } from "react";
 
-type ContextProps = {
+interface ContextProps {
   active: boolean;
   language: string;
   data: Translations;
