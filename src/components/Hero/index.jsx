@@ -6,7 +6,7 @@ const Hero = () => {
   const { data } = useContext(GlobalContext);
 
   const handleContact = () => {
-    window.location.href = "mailto:chendoec@live.com";
+    window.location.href = "mailto:enchufevirtual@gmail.com";
   }
 
   return (

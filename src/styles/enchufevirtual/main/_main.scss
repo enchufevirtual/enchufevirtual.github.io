@@ -42,7 +42,7 @@
 }
 .Main_content {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   max-width: 100%;
   gap: 1rem;
   padding-bottom: 70px;
@@ -86,7 +86,6 @@
   align-items: center;
   background-color: $card;
   transition: all .2s ease-out;
-  cursor: pointer;
   border-radius: 7px;
   overflow: hidden;
 }
@@ -119,6 +118,10 @@
   padding: 0.5rem 0;
   font-size: 12px;
   width: inherit;
+  transition: color .3s ease-in-out;
+}
+.buttons a:hover {
+  color: $primary;
 }
 .buttons a:first-child {
   border-right: $border;

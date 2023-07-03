@@ -6,7 +6,7 @@ export const database: DataBase[] = [
     title: "Radio Ev",
     image: "radioev.jpg",
     source: "https://github.com/orgs/enchufevirtual/repositories",
-    type: 'FRONTEND',
+    type: 'BACKEND',
     demo: "https://radio.enchufevirtual.com/",
     description_en: "This Open Source project is an application to enjoy the best music of the moment and connect with people from different parts of the world through an integrated chat.",
     description_es: "Este proyecto Open Source es una aplicación para disfrutar de la mejor música del momento y conectar con personas de diferentes partes del mundo a través de un chat integrado."
@@ -23,9 +23,9 @@ export const database: DataBase[] = [
   {
     title: "Chendo Calc",
     image: "chendocalc.jpg",
-    source: "https://github.com/chendodev/chendoCalc",
+    source: "https://github.com/chendodev/chendocalc",
     type: 'FRONTEND',
-    demo: "https://chendo-calc.vercel.app/",
+    demo: "https://chendo.dev/chendocalc/",
     description_en: "Scientific calculator, built with Html, Css and JavaScript, intermediate use.",
     description_es: "Calculadora científica, construida con Html, Css y JavaScript, uso intermedio."
   },
@@ -37,15 +37,6 @@ export const database: DataBase[] = [
     demo: "https://chendo.dev/oschen",
     description_en: "This version of windows is created in React, but also has a PHP version.",
     description_es: "Esta vesión de windows está creada en React, pero también tiene una versión en PHP."
-  },
-  {
-    title: "Space",
-    image: "space.jpg",
-    source: "https://github.com/chendodev/Space-website",
-    type: 'FRONTEND',
-    demo: "https://space-chen.vercel.app/",
-    description_en: "This is a project based on a challenge from FrontenMentor, it has Html, Css and JavaScript.",
-    description_es: "Este es un proyecto basado en un desafío de FrontenMentor, Tiene Html, Css y JavaScript."
   },
   {
     title: "Devaechba",

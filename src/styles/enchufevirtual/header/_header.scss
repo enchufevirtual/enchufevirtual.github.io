@@ -62,6 +62,14 @@
 
   li {
     margin: 0 5px;
+
+    a {
+      transition: color .3s ease-in-out;
+    }
+
+    a:hover {
+      color: $primary !important;
+    }
   }
   li:last-child {
     margin-right: 0;
