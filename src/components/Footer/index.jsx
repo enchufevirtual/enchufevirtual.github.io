@@ -17,7 +17,7 @@ const Footer = () => {
       </div>
       <div className="copyright">
         <p>Copyright @ {date} | <a href="https://github.com/orgs/enchufevirtual/repositories" aria-label="author">Enchufe Virtual</a></p>
-        <br /> <p>by Jorge Del Pezo</p>
+        <p style={{textAlign: 'center'}}>by Jorge Del Pezo</p>
       </div>
     </footer>
   );
