@@ -16,7 +16,7 @@ const Footer = () => {
         <a href="https://www.instagram.com/enchufevirtual" aria-label="instagram" target="_blank"><i className="fab fa-instagram"></i></a>
       </div>
       <div className="copyright">
-        <p>Copyright @ {date} | <a href="https://github.com/orgs/enchufevirtual/repositories" aria-label="author">Enchufe Virtual</a>by Jorge Del Pezo</p>
+        <p>Copyright @ {date} | <a href="https://github.com/orgs/enchufevirtual/repositories" aria-label="author">Enchufe Virtual</a></ br>by Jorge Del Pezo</p>
       </div>
     </footer>
   );
