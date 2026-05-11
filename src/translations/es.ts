@@ -2,8 +2,8 @@ import { Translations } from "@/interfaces/interfaces";
 
 export const es: Translations = {
   hero: {
-    p: `Espacio creado para compartir proyectos de código abierto,
-    llevando el conocimiento a otro nivel.`,
+    p: `Tecnología para empresas y sitios web que venden.
+Equipos, soluciones y desarrollo a tu medida.`,
     span: 'Contacto'
   },
   main: {
