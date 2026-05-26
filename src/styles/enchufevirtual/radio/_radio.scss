@@ -1,4 +1,6 @@
 /*Enchufe Virtual - Radio*/
+@use '../../base/var' as *;
+
 .Radio .controls {
   background-color: $background;
   border-top: $border;

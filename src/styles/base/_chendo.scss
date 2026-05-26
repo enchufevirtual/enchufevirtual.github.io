@@ -10,7 +10,9 @@
 
 -----------------------------------------------------------------------------------*/
 /* <---- Style Chendo Dev ----> */
-*, ::after, ::before {
+@use 'var' as *;
+  
+::after, ::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;

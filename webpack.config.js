@@ -38,8 +38,20 @@ module.exports = {
         }
       },
       {
-        test: /\.s?css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        test: /\.s?css$/,
+        use: [
+          MiniCssExtractPlugin.loader, 
+          'css-loader', 
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                api: 'modern',
+                loadPaths: [path.resolve(__dirname, 'src/styles')],
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,

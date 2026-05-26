@@ -1,4 +1,5 @@
 // Header
+@use '../../base/var' as *;
 
 #Header .menu {
   display: grid;
@@ -7,6 +8,7 @@
   backdrop-filter: blur(7px);
   width: 100%;
   padding: .5rem;
+  margin: 0;
   position: fixed;
   z-index: 3;
   top: 0;
