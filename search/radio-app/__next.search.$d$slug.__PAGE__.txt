@@ -2,5 +2,5 @@
 2:I[16181,["/_next/static/chunks/0-.3ys2z_l84q.js","/_next/static/chunks/0eb~.id2yizc1.js","/_next/static/chunks/08qhns-8e_ubq.js"],"default"]
 3:I[21554,["/_next/static/chunks/0-.3ys2z_l84q.js","/_next/static/chunks/0eb~.id2yizc1.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"slug":"radio-app"}],[["$","script","script-0",{"src":"/_next/static/chunks/08qhns-8e_ubq.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"g6s6PYeNxKrD9IB5DS2Ng"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"slug":"radio-app"}],[["$","script","script-0",{"src":"/_next/static/chunks/08qhns-8e_ubq.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hTwDmKRLxGMqnddF7PS5d"}
 5:null
