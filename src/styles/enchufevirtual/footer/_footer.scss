@@ -1,6 +1,25 @@
 @use '../../base/var' as *;
 @use '../../base/mixins' as *;
 
+#footer_container {
+  display: grid;
+  grid-template-columns: 6% 1fr 6%;
+  justify-items: center;
+}
+#footer_container .copyright {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: start;
+}
+#footer_container .socialMedia {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+}
+#footer_container .socialMedia .social-styles:last-child {
+  margin-right: 0;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -28,23 +47,31 @@ footer {
     bottom: 140px !important;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 565px) {
   .footer-line::before {
     bottom: 800x !important;
     left: 1rem !important;
     right: 1rem !important;
   }
-    footer {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    #footer_container {
+    grid-template-columns: 1fr;
+  }
+  #footer_container .copyright {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+  }
+  #footer_container .socialMedia {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
   }
 }
 .footer-line::before {
   position: absolute;
   content: '';
   border-top: $border;
-  bottom: 80px;
+  bottom: 100px;
   left: 0;
   right: 0;
   z-index: -1;

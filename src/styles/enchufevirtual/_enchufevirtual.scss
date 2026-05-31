@@ -8,15 +8,9 @@ body {
   background-color: $background;
   color: $solid;
   font-family: $font-primary;
-  display: grid;
   user-select: none;
-  place-content: center;
-  place-items: center;
-  width: 95%;
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 body::before {
@@ -55,4 +49,10 @@ h2 {
 }
 #app {
   height: calc(100vh - 100px);
+}
+#ContainerLayout {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 0 auto;
 }

@@ -6,7 +6,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return(
-    <footer>
+    <footer id="footer_container">
        <div className="copyright">
         <span className="footer-line"></span>
         <div className="verified-badge">

@@ -12,12 +12,13 @@ const Header  = () => {
   return (
     <header id="Header">
       <ul className="menu">
-        <li>
+        <li id="LogoGrid">
           <a href="https://enchufevirtual.com/">
-            <Logo /> Enchufe Virtual
+            <Logo /> { matches ? null : "Enchufe Virtual" }
           </a>
         </li>
         {matches ? <MenuBtn /> : <HeaderSocial />}
+        {matches ? <HeaderSocial /> : null }
       </ul>
     </header>
   );

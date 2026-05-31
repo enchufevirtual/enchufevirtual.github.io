@@ -9,7 +9,7 @@ const HeaderSocial = () => {
   const { active, changeLanguage, language } = useContext(GlobalContext);
 
  return (
-  <ul className={active ? "Header_social transform" : "Header_social"}>
+  <ul id="Header_social" className={active ? "Header_social transform" : "Header_social"}>
     <li className="menu-link"><a href="https://radio.enchufevirtual.com" aria-label="radio">Store</a></li>
     <li className="menu-link"><a aria-label="repositories" href="https://github.com/orgs/enchufevirtual/repositories" target="_blank">GitHub</a></li>
     <li className="menu-link"><a aria-label="facebook" href="https://www.facebook.com/enchufevirtual" target="_blank">Facebook</a></li>

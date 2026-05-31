@@ -11,10 +11,9 @@ const MenuBtn = () => {
 
  return (
   <>
-  <li onClick={handleMenu} className={active ? "MenuBtn open" : "MenuBtn"}>
+  <li id="MenuBtnGrid" onClick={handleMenu} className={active ? "MenuBtn open" : "MenuBtn"}>
     <div className="MenuBtn_burger"></div>
   </li>
-  <HeaderSocial />
   </>
 
  );

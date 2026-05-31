@@ -9,24 +9,35 @@
 }
 
 .Hero_inner {
-  position: relative;
-  z-index: 1;
   display: grid;
   align-items: center;
-  gap: 3rem;
-  width: min(100%, 1240px);
   text-align: left;
-  min-height: 84vh;
-  margin: 0 auto;
-  padding: 6rem 1rem 2rem;
+  min-height: 80vh;
 }
 
 @media (min-width: 1024px) {
   .Hero_inner {
-    grid-template-columns: 1.05fr 0.95fr;
-    min-height: 90vh;
-    padding: 6rem 3rem 1rem;
-    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 6% 1fr 6%;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-top: 50px;
+  }
+  .Hero_content {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: start;
+    max-width: 50%;
+  }
+  .Hero_image {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+  .Hero_image img {
+   width: 500px;
+   height: auto;
   }
 }
 @media (max-width: 1023px) {
@@ -43,6 +54,7 @@
   }
    .Hero_text {
     text-align: center;
+    font-size: 1em;
     width: 100%;
   }
   .Hero_content {
@@ -77,12 +89,9 @@
 }
 
 .Hero_text {
-  font-size: 1.05rem;
   font-family: $font-secundary;
   font-weight: 400;
   max-width: 680px;
-  line-height: 1.85;
-  padding: 0;
   color: $card-text;
 }
 .Hero_intro p {
@@ -90,9 +99,6 @@
 }
 
 @media (min-width: 991px) {
-  .Hero_text {
-    font-size: 1.12rem;
-  }
   .Hero_content h1 {
   font-size: clamp(3rem, 4vw, 4rem);
 }
@@ -137,24 +143,6 @@
   font-size: 1rem;
   line-height: 1.6;
   font-weight: 600;
-}
-
-.Hero_image {
-  position: relative;
-  width: 100%;
-  height: auto;
-  display: block;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.Hero_image svg {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 720px;
-  height: auto;
-  border-radius: 36px;
 }
 
 .btn {

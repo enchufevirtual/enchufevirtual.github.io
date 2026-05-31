@@ -47,7 +47,7 @@ const Hero = () => {
       </div>
         {matches ? (
           <div className="Hero_image">
-           <img src="/assets/heroev.svg" alt="Enchufe Virtual Hero" loading="lazy" width="500" height="500" />
+           <img src="/assets/Hero-ev.png" alt="Enchufe Virtual Hero" loading="lazy" />
           </div>
         ) : null}
       </div>
