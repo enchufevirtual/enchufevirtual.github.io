@@ -1,10 +1,14 @@
 {
   "name": "enchufevirtual",
   "version": "2.0.0",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/soychendo/enchufevirtual.git"
+  },
   "homepage": "https://enchufevirtual.com",
   "description": "Next.js open source showcase and store for Enchufe Virtual",
   "scripts": {
-    "predeploy": "npm run build && echo enchufevirtual.com > ./out/CNAME",
+    "predeploy": "npm run build && echo enchufevirtual.com > ./out/CNAME && touch ./out/.nojekyll",
     "deploy": "gh-pages -d out",
     "start": "next dev",
     "preview": "next start",
