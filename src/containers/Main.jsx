@@ -1,33 +1,55 @@
-import { useContext } from "react";
-import { faker } from '@faker-js/faker'
+'use client'
+
+import { useContext, useState, useMemo, useCallback } from "react";
 import { GlobalContext }  from "../context/GlobalContext";
 
 import { database } from "@/database/database";
 import Card from "@/containers/Card";
-import Options from "@/containers/Options";
 
 const Main = () => {
-  const card = [] ;
-  const { load, globalValue, data } = useContext(GlobalContext);
+  const { globalValue } = useContext(GlobalContext);
+  const [activeMenu, setActiveMenu] = useState(0);
 
-  // validated categories && push cards
-  if (globalValue == "CATEGORIES") {
-    database.forEach(data => {
-      card.push(<Card key={faker.datatype.uuid()} data={data} id={faker.datatype.uuid()} />);
-    });
-  } else {
-    let db = database.filter(type => type.type == globalValue);
-    db.forEach(data => {
-      card.push(<Card key={faker.datatype.uuid()} data={data} id={faker.datatype.uuid()} />);
-    });
-  }
+  const menuItems = useMemo(() => [
+    { label: 'Open Source', value: 'OPEN_SOURCE' },
+    { label: 'Client Work', value: 'CLIENTS' },
+    { label: 'Personal Projects', value: 'PERSONAL' }
+  ], []);
+
+  const selectedCategory = menuItems[activeMenu].value;
+
+  const filteredCards = useMemo(() => {
+    const initial = database.filter((item) => item.category === selectedCategory);
+    if (globalValue && globalValue !== "CATEGORIES") {
+      return initial.filter((item) => item.type === globalValue);
+    }
+    return initial;
+  }, [selectedCategory, globalValue]);
+
+  const handleMenuClick = useCallback((index) => {
+    setActiveMenu(index);
+  }, []);
 
   return (
-    <div className={{myAnimation: load}} id="Main">
-      <div className="title"><p>{data.main.p}</p></div>
-      <Options />
+    <div id="Main">
+      <nav className="filter-menu" aria-label="Proyectos filter">
+        {menuItems.map((item, i) => (
+          <button
+            key={item.value}
+            type="button"
+            className={`filter-menu__item ${activeMenu === i ? 'is-active' : ''}`}
+            aria-pressed={activeMenu === i}
+            onClick={() => handleMenuClick(i)}
+          >
+            <span className="filter-menu__dot" aria-hidden="true">●</span>
+            <span className="filter-menu__label">{item.label}</span>
+          </button>
+        ))}
+      </nav>
       <div className="Main_content">
-        {card.length ? card : <p className="messageError">No results, try another category</p>}
+        {filteredCards.length ? filteredCards.map((item) => (
+          <Card key={item.slug} data={item} />
+        )) : <p className="messageError">No results, try another category</p>}
       </div>
     </div>
   );

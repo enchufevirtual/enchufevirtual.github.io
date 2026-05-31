@@ -24,6 +24,13 @@
 .loading-end:before{
   bottom: -60%;
 }
+.loading-end {
+  pointer-events: none;
+}
+.loading-hidden {
+  display: none !important;
+  pointer-events: none;
+}
 .loading:after, .loading:before {
   content: '';
   background-color: $background;

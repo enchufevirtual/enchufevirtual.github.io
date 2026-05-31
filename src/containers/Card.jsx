@@ -1,54 +1,51 @@
-import React, { useState, useContext } from "react";
+'use client'
+
+import React, { useState, useMemo, useContext } from "react";
+import Link from 'next/link'
 import { GlobalContext } from "../context/GlobalContext";
 
-
-const Card = ({data, id}) => {
-
+const Card = ({ data }) => {
   const { language } = useContext(GlobalContext);
+  const [pressed, setPressed] = useState(false);
 
-  const [mount, setMount] = useState(false);
-  const [over, setOver] = useState(false);
+  const description = useMemo(
+    () => (language === 'es' ? data.description_es : data.description_en),
+    [language, data.description_es, data.description_en]
+  );
 
-  // Card Animation - mount - mouse - click - over
-  const handleMouseDown = () => ( setMount(true) );
-  const handleMouseAll = () => ( setMount(false) );
-  const handleMouseOver = () => ( setOver(true) );
-  const handleMouseOut = () => ( setOver(false) );
+  const summary = useMemo(
+    () => (description ? `${description.slice(0, 110)}${description.length > 110 ? '...' : ''}` : ''),
+    [description]
+  );
 
-  const styles = {
-    transform: "translateY(4px) scale(0.95) translateZ(0px)",
-    transformOver: "translateY(4px) scale(1.01) translateZ(0px)",
-  }
+  const slug = useMemo(
+    () => data.slug || data.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, ''),
+    [data.slug, data.title]
+  );
+
+  const cardClasses = `card ${pressed ? 'card--pressed' : ''}`;
 
   return (
-    <div
-      onTouchStart={handleMouseDown}
-      onTouchEnd={handleMouseAll}
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseAll}
-      onMouseLeave={handleMouseAll}
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
-      className="card"
-      style={{transform: mount ? styles.transform : over ? styles.transformOver: "none"}}
-      id={id}
+    <article
+      onTouchStart={() => setPressed(true)}
+      onTouchEnd={() => setPressed(false)}
+      onMouseDown={() => setPressed(true)}
+      onMouseUp={() => setPressed(false)}
+      onMouseLeave={() => setPressed(false)}
+      className={cardClasses}
     >
-        <img src={`assets/${data.image}`} alt="imagen" />
-        <div className="card-body">
+      <div className="card-body">
+        <div className="card-header">
+          <span className="card-type">{data.type}</span>
           <h2>{data.title}</h2>
-          <p>{
-              language == 'es'
-                ? (data.description_es?.substring(0, 70) + "...")
-                : (data.description_en?.substring(0, 70) + "...")
-              }
-          </p>
-          <div className="buttons">
-            <a href={data.source} target="_blank">Source</a>
-            <a href={data.demo} target="_blank">Demo</a>
-          </div>
         </div>
-    </div>
+        <p>{summary}</p>
+          <Link className="button button-outline button-ev" href={`/search/${slug}`}>
+            Leer más
+          </Link>
+      </div>
+    </article>
   );
 }
 
-export default Card;
+export default React.memo(Card);

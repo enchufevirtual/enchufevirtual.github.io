@@ -4,41 +4,88 @@
 footer {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  position: relative;
   width: 100%;
   height: 100px;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .verified-badge {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer-line::before {
+    bottom: 100px !important;
+  }
+}
+@media (max-width: 607px) {
   footer {
+    flex-direction: column ;
+  }
+}
+@media (max-width: 607px) {
+  .footer-line::before {
+    bottom: 140px !important;
+  }
+}
+@media (max-width: 480px) {
+  .footer-line::before {
+    bottom: 800x !important;
+    left: 1rem !important;
+    right: 1rem !important;
+  }
+    footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 }
-footer::before {
+.footer-line::before {
   position: absolute;
   content: '';
   border-top: $border;
+  bottom: 80px;
   left: 0;
   right: 0;
   z-index: -1;
 }
-@media (max-width: 480px) {
-  footer::before {
-    height: 150px;
-  }
-}
+
 .socialMedia a, .copyright a {
   text-decoration: none;
   margin: .3vmax;
   color: $scroll;
 }
+.socialMedia {
+  display: flex;
+}
+.socialMedia .social-styles {
+  margin: 1rem 0.5rem;
+}
+
+.socialMedia svg,
 .socialMedia i {
-  color: $scroll;
-  font-size: 1.2rem;
-  word-wrap: break-word;
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: currentColor;
 }
 .copyright p, a {
   font-size: 1rem;
   color: $scroll;
+  margin: 0;
+}
+.verified-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.verified-badge svg {
+  margin-left: 0.2rem;
+  position: relative;
+  top: 0.15rem;
+}
+footer .social-styles svg {
+  transition: color .2s ease;
+}
+footer .social-styles svg:hover {
+  color: $primary !important;
 }

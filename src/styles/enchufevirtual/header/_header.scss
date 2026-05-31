@@ -3,15 +3,19 @@
 
 #Header .menu {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-color: rgba($background, 0.7);
-  backdrop-filter: blur(7px);
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba($background, 0.92);
+  backdrop-filter: blur(14px);
   width: 100%;
-  padding: .5rem;
+  padding: 1rem 1.5rem;
   position: fixed;
   z-index: 3;
   top: 0;
   left: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
 
   li {
     display: flex;
@@ -25,10 +29,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-weight: 100;
-      font-size: 14px;
+      font-weight: 600;
+      font-size: 0.95rem;
       color: $gray;
-      text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
+      transition: color .2s ease;
 
       svg {
         width: 30px;
@@ -83,7 +87,7 @@
   #Header .menu .Header_social {
     position: absolute;
     flex-direction: column;
-    top: 46px;
+    top: 71px;
     left: 0;
     right: 0;
     width: 100%;
@@ -121,4 +125,12 @@
 #Header .language {
   border: none;
   outline: none;
+}
+#Header .menu li:first-child a {
+  gap: 0.6rem;
+  color: $solid;
+}
+
+#Header .menu li:first-child a:hover {
+  color: $primary;
 }

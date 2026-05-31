@@ -66,6 +66,15 @@ typings/
 # Optional REPL history
 .node_repl_history
 
+# Next.js export output
+out/
+
+# macOS
+.DS_Store
+
+# Local backup SVGs
+public/assets/*.orig.svg
+
 # Output of 'npm pack'
 *.tgz
 

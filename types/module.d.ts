@@ -91,14 +91,22 @@ declare module '@/context/type' {
 };
 declare module '@/database/database.model' {
 
-    interface DataBase {
-      title: string;
-      image: string;
-      source: string;
-      type: string;
-      demo: string;
-      description_en: string;
-      description_es: string;
+  export type ProjectCategory = 'OPEN_SOURCE' | 'CLIENTS' | 'PERSONAL' | 'OTHER';
+  export type ProjectType = 'FRONTEND' | 'BACKEND' | 'LIBRARY';
+
+  export interface DataBase {
+    title: string;
+    slug: string;
+    image: string;
+    category: ProjectCategory;
+    source: string;
+    type: ProjectType;
+    demo: string;
+    author: string;
+    authorUrl: string;
+    authorSocials: { label: string; url: string }[];
+    description_en: string;
+    description_es: string;
   }
 
 };

@@ -29,17 +29,25 @@ export const dataReducer = (state: GlobalValue , action: ActionType) => {
         ...state,
         value: payload
       }
+    case 'CATEGORIES':
+    case 'FRONTEND':
+    case 'BACKEND':
+    case 'LIBRARY':
+      return {
+        ...state,
+        value: payload,
+      }
     case 'en':
       return {
         ...state,
         language: payload,
-        data: state.data = en
+        data: en,
       }
     case 'es':
       return {
         ...state,
         language: payload,
-        data: state.data = es
+        data: es,
       }
     default:
       return state;

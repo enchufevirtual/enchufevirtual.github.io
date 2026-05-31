@@ -1,51 +1,32 @@
 {
   "name": "enchufevirtual",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "homepage": "https://enchufevirtual.com",
-  "description": "Open Source Projects",
-  "main": "./src/index.js",
+  "description": "Next.js open source showcase and store for Enchufe Virtual",
   "scripts": {
-    "predeploy": "npm run build && echo enchufevirtual.com > ./build/CNAME",
-    "deploy": "gh-pages -d build",
-    "start": "webpack serve --open",
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development"
-  },
-  "overrides": {
-    "uuid": "^11.0.3"
+    "predeploy": "npm run build && echo enchufevirtual.com > ./out/CNAME",
+    "deploy": "gh-pages -d out",
+    "start": "next dev",
+    "preview": "next start",
+    "build": "next build",
+    "dev": "next dev"
   },
   "keywords": [
     "OS",
     "EnchufeVirtual"
   ],
-  "author": "@chendodev <chendodev@gmail.com>",
+  "author": "@soychendo <chendoec@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@babel/preset-react": "^7.18.6",
-    "@babel/runtime": "^7.29.7",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.9",
-    "gh-pages": "^6.3.0",
+    "next": "^16.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.6",
-    "@babel/plugin-transform-runtime": "^7.19.6",
-    "@babel/preset-env": "^7.19.4",
-    "@babel/preset-typescript": "^7.18.6",
-    "@faker-js/faker": "^7.6.0",
-    "babel-loader": "^9.0.0",
-    "copy-webpack-plugin": "^14.0.0",
-    "css-loader": "^6.7.1",
-    "html-loader": "^4.2.0",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.6.1",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "gh-pages": "^6.3.0",
     "sass": "^1.100.0",
-    "sass-loader": "^17.0.0",
-    "typescript": "^4.9.3",
-    "webpack": "^5.107.2",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.2.4"
+    "typescript": "^5.1.0"
   }
 }

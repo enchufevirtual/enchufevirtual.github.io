@@ -1,64 +1,73 @@
-import React, { useState, useEffect, useRef, useReducer } from "react";
+'use client'
+
+import React, { useState, useEffect, useReducer, useCallback, useMemo } from "react";
 
 import { GlobalContext } from "@/context/GlobalContext";
 import { dataReducer } from "@/context/dataReducer";
 import { PropsProvider } from "@/interfaces/interfaces";
-import { en } from "@/translations/en";
+import { es } from "@/translations/es";
 
 const GlobalProvider = ({children}: PropsProvider) => {
 
   const INITIAL_STATE = {
     value: 'CATEGORIES',
-    language: 'en',
-    data: en
+    language: 'es',
+    data: es
   }
-  // Use Reducer function
   const [globalState, dispatch] = useReducer(dataReducer, INITIAL_STATE);
 
   const [active, setActive] = useState(false);
   const [load, setLoad] = useState(false);
 
-  // Change Category
-  const changeCategory = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    dispatch( { type: e.currentTarget.value, payload: e.currentTarget.value } );
-  }
-  // Language Dinamic
-  const changeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    dispatch( { type:  e.currentTarget.value, payload: e.currentTarget.value } );
-  }
-  // Menu Toggle
-  const handleMenu = () => ( setActive(!active) );
-  // if Load document
+  const changeCategory = useCallback((e: React.ChangeEvent<HTMLSelectElement>) => {
+    dispatch({ type: e.currentTarget.value, payload: e.currentTarget.value });
+  }, []);
+
+  const changeLanguage = useCallback((e: React.ChangeEvent<HTMLSelectElement>) => {
+    dispatch({ type: e.currentTarget.value, payload: e.currentTarget.value });
+  }, []);
+
+  const handleMenu = useCallback(() => {
+    setActive((prev) => !prev);
+  }, []);
+
   useEffect(() => {
-    const onLoad = (): void => {
+    const markLoaded = (): void => {
       setLoad(true);
+    };
+
+    if (document.readyState === 'complete') {
+      markLoaded();
+      return;
     }
 
-    if(document.readyState === 'complete') {
-      onLoad();
-    } else {
-      window.addEventListener('load', onLoad);
-
-      return () => window.removeEventListener('load', onLoad);
+    window.addEventListener('load', markLoaded);
+    return () => {
+      window.removeEventListener('load', markLoaded);
     }
   }, []);
 
-  const languageContext = {
+  const languageContext = useMemo(() => ({
     language: globalState.language,
     changeLanguage,
     changeCategory,
     globalValue: globalState.value,
-    data: globalState.data
-  }
-  const siteContext = {
+    data: globalState.data,
+  }), [globalState.language, globalState.value, globalState.data, changeLanguage, changeCategory]);
+
+  const siteContext = useMemo(() => ({
     active,
     load,
     handleMenu,
-  }
-  const globalContext = {
-    ...languageContext,
-    ...siteContext
-  }
+  }), [active, load, handleMenu]);
+
+  const globalContext = useMemo(
+    () => ({
+      ...languageContext,
+      ...siteContext,
+    }),
+    [languageContext, siteContext]
+  );
 
   return (
     <GlobalContext.Provider value={globalContext}>
