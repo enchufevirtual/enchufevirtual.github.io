@@ -9,7 +9,7 @@
   "description": "Next.js open source showcase and store for Enchufe Virtual",
   "scripts": {
     "predeploy": "npm run build && echo enchufevirtual.com > ./out/CNAME && touch ./out/.nojekyll",
-    "deploy": "gh-pages -d out",
+    "deploy": "gh-pages -t -d out",
     "start": "next dev",
     "preview": "next start",
     "build": "next build",
