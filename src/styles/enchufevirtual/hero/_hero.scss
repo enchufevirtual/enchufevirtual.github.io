@@ -85,6 +85,9 @@
   padding: 0;
   color: $card-text;
 }
+.Hero_intro p {
+  margin: 0.2em !important;
+}
 
 @media (min-width: 991px) {
   .Hero_text {
@@ -176,6 +179,9 @@
   opacity: 0.96;
   background: #3b82f6;
 }
+button.btn.btn-hero {
+  margin-top: 1rem;
+}
 
 @media (max-width: 991px) {
 
@@ -225,9 +231,4 @@
   .Hero_intro h1 {
     font-size: 1.5rem;
   }
-}
-
-#tsparticles {
-  width: 100vw !important;
-  height: 100vh !important;
 }

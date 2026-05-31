@@ -41,7 +41,7 @@ const Hero = () => {
           ))}
         </div>
 
-        <button type="button" onClick={handleContact} className="btn">
+        <button type="button" onClick={handleContact} className="btn btn-hero">
           <span>{ data.hero.span }</span>
         </button>
       </div>
