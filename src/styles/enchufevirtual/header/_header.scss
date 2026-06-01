@@ -45,7 +45,6 @@
       svg {
         width: 30px;
         height: 30px;
-        margin: 4px;
         margin-right: 0;
       }
     }
@@ -72,7 +71,6 @@
   grid-row: 1;
   justify-self: end;
   display: flex;
-  padding-right: 1rem;
   align-items: center;
 
   li {
@@ -147,7 +145,6 @@
   outline: none;
 }
 #Header .menu li:first-child a {
-  gap: 0.2rem;
   color: $solid;
 }
 

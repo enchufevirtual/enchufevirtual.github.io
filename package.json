@@ -2,8 +2,8 @@
   "name": "enchufevirtual",
   "version": "2.0.0",
   "repository": {
-  "type": "git",
-  "url": "https://github.com/soychendo/enchufevirtual.git"
+    "type": "git",
+    "url": "https://github.com/soychendo/enchufevirtual.git"
   },
   "homepage": "https://enchufevirtual.com",
   "description": "Next.js open source showcase and store for Enchufe Virtual",
@@ -24,9 +24,12 @@
   "dependencies": {
     "next": "^16.1.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
+    "@types/node": "25.9.1",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
     "gh-pages": "^6.3.0",

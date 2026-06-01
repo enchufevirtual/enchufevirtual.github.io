@@ -9,8 +9,8 @@ const Card = ({ data }) => {
   const [pressed, setPressed] = useState(false);
 
   const description = useMemo(
-    () => (language === 'es' ? data.description_es : data.description_en),
-    [language, data.description_es, data.description_en]
+    () => (language === 'es' ? data.description_card : data.description_en),
+    [language, data.description_card, data.description_en]
   );
 
   const summary = useMemo(
