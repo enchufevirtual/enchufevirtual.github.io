@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[16978,["/_next/static/chunks/0vr~pstec1c3k.js","/_next/static/chunks/0a8d02nq59uyd.js","/_next/static/chunks/0ukwa9td7mc8b.js"],"default"]
+2:I[16978,["/_next/static/chunks/0vr~pstec1c3k.js","/_next/static/chunks/0a8d02nq59uyd.js","/_next/static/chunks/0o89rse1j11e9.js","/_next/static/chunks/10s.bfyz9u7_h.js"],"default"]
 3:I[76217,["/_next/static/chunks/0vr~pstec1c3k.js","/_next/static/chunks/0a8d02nq59uyd.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"slug":"dentallapp-backend"}],[["$","script","script-0",{"src":"/_next/static/chunks/0ukwa9td7mc8b.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"YxrvHczO67BnDrlq9A3eZ"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"slug":"dentallapp-backend"}],[["$","script","script-0",{"src":"/_next/static/chunks/0o89rse1j11e9.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/10s.bfyz9u7_h.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"UuLMCvvGTKdX6iTVcoqkS"}
 5:null
