@@ -47,7 +47,7 @@
     align-items: center;
     justify-content: center;
     min-height: 90vh;
-    padding: 6rem 3rem 1rem;
+    padding: 5rem 3rem 1rem;
   }
   .Hero_intro h1 {
     text-align: center;
@@ -198,6 +198,9 @@ button.btn.btn-hero {
 @media (max-width: 480px) {
   #Hero {
     padding-top: 3rem;
+  }
+  .Hero_inner {
+    padding: 1rem 2rem 1rem  !important;
   }
 
   .btn {
