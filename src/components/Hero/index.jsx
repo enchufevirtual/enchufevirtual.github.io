@@ -24,7 +24,7 @@ const Hero = () => {
 
           <div className="Hero_actions">
             <a className="btn btn-primary" href="#Main">{data.hero.action}</a>
-            <a className="btn btn-outline" href="mailto:enchufevirtual@gmail.com">
+            <a className="btn btn-outline" href="https://github.com/enchufevirtual" target="_blank" rel="noopener noreferrer">
               {data.hero.secondaryAction}
             </a>
           </div>

@@ -53,13 +53,8 @@ const ProductDetailsMarkdown = ({ text, language }) => {
         a: ({ node, ...props }) => (
           <a className="product-detail__description-link" target="_blank" rel="noreferrer noopener" {...props} />
         ),
-        code: ({ inline, className, children, ...props }) => {
-          const codeText = String(children).replace(/\n$/, '');
-
-          if (inline) {
-            return <code className="product-detail__code-inline" {...props}>{children}</code>;
-          }
-
+        pre: ({ node, children, ...props }) => {
+          const codeText = String(children?.props?.children ?? '').replace(/\n$/, '');
           return (
             <div className="product-detail__code-wrapper">
               <div className="product-detail__copy-action">
@@ -73,10 +68,16 @@ const ProductDetailsMarkdown = ({ text, language }) => {
                 </button>
                 {copied && <span className="product-detail__copy-notice">{copiedLabel}</span>}
               </div>
-              <pre className="product-detail__code-block"><code className={className} {...props}>{children}</code></pre>
+              <pre className="product-detail__code-block" {...props}>{children}</pre>
             </div>
           );
         },
+        code: ({ node, className, ...props }) => (
+          <code
+            className={className || 'product-detail__code-inline'}
+            {...props}
+          />
+        ),
         strong: ({ node, ...props }) => <strong {...props} />,
         em: ({ node, ...props }) => <em {...props} />
       }}

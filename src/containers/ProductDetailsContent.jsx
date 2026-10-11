@@ -38,8 +38,12 @@ const getTechColor = (value) => {
 
 const ProductDetailsContent = ({ product, language, onBack }) => {
   const description = useMemo(
-    () => (language === 'es' ? product.description_es : product.description_en),
-    [language, product.description_es, product.description_en]
+    () => (
+      language === 'es'
+        ? product.description_es
+        : product.description_detail_en || product.description_en
+    ),
+    [language, product.description_es, product.description_detail_en, product.description_en]
   );
 
   const technologies = product.technologies || [];

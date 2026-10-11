@@ -23,5 +23,6 @@ export interface DataBase {
   technologies?: string[];
   description_card: string;
   description_en: string;
+  description_detail_en: string;
   description_es: string;
 }

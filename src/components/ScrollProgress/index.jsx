@@ -32,6 +32,7 @@ const ScrollProgress = () => {
   const currentSection = sections[Math.min(activeSection, sections.length - 1)] ?? homeSections[0];
   const sectionLabel = currentSection.labels[language] ?? currentSection.labels.es;
   const percentage = Math.round(scrollMetrics.progress);
+  const isKnownPage = pathname === "/" || pathname.startsWith("/page/");
 
   const updateProgress = useCallback(() => {
     const documentHeight = Math.max(
@@ -115,6 +116,8 @@ const ScrollProgress = () => {
       if (frame) window.cancelAnimationFrame(frame);
     };
   }, [updateProgress]);
+
+  if (!isKnownPage) return null;
 
   return (
     <div

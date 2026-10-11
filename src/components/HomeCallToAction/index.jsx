@@ -11,7 +11,12 @@ const HomeCallToAction = () => {
       <p className="home-cta__eyebrow">ENCHUFE VIRTUAL</p>
       <h2 id="home-cta-title">{data.cta.p}</h2>
       <p className="home-cta__text">{data.cta.tagline}</p>
-      <a className="home-cta__action" href="mailto:enchufevirtual@gmail.com">
+      <a
+        className="home-cta__action"
+        href="https://wa.me/593985588376"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {data.cta.action}
       </a>
     </section>

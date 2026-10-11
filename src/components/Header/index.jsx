@@ -57,7 +57,7 @@ const Header = () => {
           <span />
           <span />
         </button>
-        <a className="ev-header__contact" href="mailto:enchufevirtual@gmail.com">
+        <a className="ev-header__contact" href="/contacto">
           Contacto
         </a>
       </div>

@@ -51,8 +51,20 @@ h2 {
   height: calc(100vh - 100px);
 }
 #ContainerLayout {
-  --home-grid-max-width: 80rem;
-  --home-grid-gutter: max(1.5rem, calc((100vw - var(--home-grid-max-width)) / 2));
+  --site-grid-max-width: 80rem;
+  --site-grid-gutter: max(1.5rem, calc((100vw - var(--site-grid-max-width)) / 2));
+  --site-content-gutter: 1.5rem;
+  --site-header-height: 58px;
+  --site-header-center: 29px;
+  --site-section-spacing: clamp(3rem, 8vh, 6rem);
+  --site-hero-content-half-height: calc(
+    min(196px, calc(131.5px + 4.325vw)) +
+      clamp(0px, calc((100svh - 800px) * 0.03), 8px)
+  );
+  --site-content-start: max(
+    calc(var(--site-header-height) + var(--site-section-spacing)),
+    calc(50svh + var(--site-header-center) - var(--site-hero-content-half-height))
+  );
   --site-grid-line: rgba(255, 255, 255, 0.1);
   position: relative;
   width: 100%;
@@ -74,11 +86,103 @@ h2 {
     );
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: min(var(--home-grid-max-width), calc(100% - 3rem)) 100%;
+  background-size:
+    min(
+      var(--site-grid-max-width),
+      calc(100% - var(--site-grid-gutter) - var(--site-grid-gutter))
+    )
+    100%;
+}
+
+#ContainerLayout:has(.not-found-page),
+#ContainerLayout:has(.contact-page) {
+  background-image: none;
+}
+
+.not-found-page {
+  display: grid;
+  min-height: min(680px, calc(100vh - 116px));
+  place-items: center;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.not-found-page__content {
+  display: grid;
+  justify-items: center;
+  max-width: 34rem;
+}
+
+.not-found-page__code {
+  color: $primary;
+  font-size: clamp(5rem, 16vw, 9rem);
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  line-height: 0.95;
+}
+
+.not-found-page h1 {
+  margin: 1.5rem 0 0.5rem;
+  color: $solid;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+.not-found-page p {
+  margin: 0 0 1.75rem;
+  color: $gray;
+  line-height: 1.7;
 }
 
 @media (max-width: 900px) {
   #ContainerLayout {
+    --site-content-gutter: 1.25rem;
+    --site-section-spacing: 3rem;
     background-image: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #ContainerLayout {
+    --site-hero-content-half-height: calc(440px - 46.5vw);
+  }
+}
+
+@media (min-width: 340px) and (max-width: 374px) {
+  #ContainerLayout {
+    --site-hero-content-half-height: 263px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 389px) {
+  #ContainerLayout {
+    --site-hero-content-half-height: 271.5px;
+  }
+}
+
+@media (min-width: 391px) and (max-width: 468px) {
+  #ContainerLayout {
+    --site-hero-content-half-height: 263px;
+  }
+}
+
+@media (min-width: 469px) and (max-width: 498px) {
+  #ContainerLayout {
+    --site-hero-content-half-height: 251px;
+  }
+}
+
+@media (min-width: 499px) and (max-width: 575px) {
+  #ContainerLayout {
+    --site-hero-content-half-height: calc(
+      202px + clamp(0px, calc((100svh - 800px) * 0.03), 8px)
+    );
+  }
+}
+
+@media (min-width: 576px) and (max-width: 718px) {
+  #ContainerLayout {
+    --site-hero-content-half-height: calc(
+      177.3px + clamp(0px, calc((100svh - 800px) * 0.03), 8px)
+    );
   }
 }

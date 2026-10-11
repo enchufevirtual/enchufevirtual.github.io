@@ -178,7 +178,6 @@
 
 .card-image {
   width: 100%;
-  aspect-ratio: 16 / 10;
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -187,7 +186,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform .45s ease;
 }
 
@@ -209,8 +208,8 @@
 @media (min-width: 901px) {
   .projects__grid {
     width: min(
-      var(--home-grid-max-width, 80rem),
-      calc(100% - var(--home-grid-gutter, 1.5rem) - var(--home-grid-gutter, 1.5rem))
+      var(--site-grid-max-width, 80rem),
+      calc(100% - var(--site-grid-gutter, 1.5rem) - var(--site-grid-gutter, 1.5rem))
     );
     margin: 0 auto;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -307,8 +306,8 @@
 @media (min-width: 901px) {
   .product-page__content {
     width: min(
-      var(--home-grid-max-width, 80rem),
-      calc(100% - var(--home-grid-gutter, 1.5rem) - var(--home-grid-gutter, 1.5rem))
+      var(--site-grid-max-width, 80rem),
+      calc(100% - var(--site-grid-gutter, 1.5rem) - var(--site-grid-gutter, 1.5rem))
     );
     max-width: none;
     padding-right: 1.5rem;

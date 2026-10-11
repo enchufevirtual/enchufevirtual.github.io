@@ -8,7 +8,7 @@
   width: 100%;
   min-height: 100vh;
   min-height: 100svh;
-  padding: 58px 0 0;
+  padding: var(--site-header-height) 0 0;
   background-color: $background;
 }
 
@@ -17,7 +17,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: clamp(3rem, 8vh, 6rem) 1.5rem;
+  padding: var(--site-section-spacing) var(--site-content-gutter);
   box-sizing: border-box;
   text-align: center;
 }
@@ -163,12 +163,6 @@
 
 button.btn.btn-hero {
   margin-top: 1rem;
-}
-
-@media (max-width: 900px) {
-  .Hero_inner {
-    padding: 3rem 1.25rem;
-  }
 }
 
 @media (max-width: 480px) {

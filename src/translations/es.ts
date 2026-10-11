@@ -4,10 +4,10 @@ export const es: Translations = {
   hero: {
     title: 'Enchufe Virtual',
     eyebrow: 'DESARROLLO DIGITAL · OPEN SOURCE',
-    tagline: 'Soluciones digitales para ideas que conectan.',
-    p: 'Diseñamos experiencias web, productos digitales y proyectos de código abierto para personas y negocios.',
+    tagline: 'De una buena idea a una solución digital útil.',
+    p: 'Diseñamos páginas y herramientas a la medida que transforman visitas en clientes y profesionalizan tu marca.',
     action: 'Ver proyectos',
-    secondaryAction: 'Hablemos',
+    secondaryAction: 'Github',
     features: ['Desarrollo web a medida', 'Experiencias UX/UI', 'Productos digitales', 'Código abierto']
   },
   main: {

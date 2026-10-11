@@ -46,7 +46,7 @@ const Footer = () => {
           <h2>{copy.explore}</h2>
           <a href="/#Hero">{copy.home}</a>
           <a href="/#Main">{copy.projects}</a>
-          <a href="mailto:enchufevirtual@gmail.com">{copy.contact}</a>
+          <a href="/contacto">{copy.contact}</a>
         </nav>
 
         <div className="footer__community">

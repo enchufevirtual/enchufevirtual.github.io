@@ -7,6 +7,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import ScrollToTop from '@/components/ScrollToTop';
+import SmoothScroll from '@/components/SmoothScroll';
 
 export const metadata = {
   title: 'Enchufe Virtual',
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
       <body>
         <GlobalProvider>
           <ScrollToTop />
+          <SmoothScroll />
           <ContainerLayout>
             <Loader />
             <Header />
