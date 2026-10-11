@@ -34,20 +34,8 @@
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   box-sizing: border-box;
-  background-color: $background;
+  background-color: transparentß;
   text-align: center;
-}
-
-.home-cta::before {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 100vw;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
-  content: "";
-  transform: translateX(-50%);
-  pointer-events: none;
 }
 
 .home-cta__eyebrow {
@@ -276,6 +264,7 @@
 .footer__main {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  background-color: $background;
   gap: 0;
 }
 

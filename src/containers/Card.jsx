@@ -45,7 +45,6 @@ const Card = ({ data, readMoreLabel = "Leer proyecto" }) => {
       </div>
       <div className="card-body">
         <div className="card-header">
-          <span className="card-type">{data.type}</span>
           <h2>{data.title}</h2>
         </div>
         <p>{summary}</p>
