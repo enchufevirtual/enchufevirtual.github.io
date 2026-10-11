@@ -9,7 +9,10 @@ import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata = {
   title: 'Enchufe Virtual',
-  description: 'Open Source Projects'
+  description: 'Open Source Projects',
+  icons: {
+    icon: '/assets/favicon.png',
+  },
 };
 
 export default function RootLayout({ children }) {
