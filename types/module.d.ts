@@ -14,6 +14,7 @@ declare module "@/interfaces/interfaces" {
   export interface Translations {
     hero: Props;
     main: Props;
+    cta: Props;
     radio: Props
   }
 }
