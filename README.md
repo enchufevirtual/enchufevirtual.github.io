@@ -1,14 +1,18 @@
 # Enchufe Virtual
 
-**Version 2.0.0**
+**Version 3.0.0**
 
-Enchufe Virtual is an open source showcase built with Next.js, designed to present software projects, stores, and digital experiences. This release ends the React Router era and moves the whole app into the Next.js App Router with static export support.
+Enchufe Virtual is an open source showcase built with Next.js, designed to present software projects, stores, and digital experiences.
 
-## 🚀 What changed in v2.0.0
+## 🚀 What's new in v3.0.0
+
+- A new visual appearance and an improved user experience.
+
+## 🚀 What changed in v3.0.0
 
 - Migrated from `react-router-dom` to **Next.js App Router**.
 - Added a product/store showcase experience.
-- Created dynamic route pages for projects via `app/search/[slug]/page.jsx`.
+- Created dynamic project pages via `app/page/[slug]/page.jsx`.
 - Added sections for **open source**, **client work**, and **personal projects**.
 - Improved responsive UI, global styles, and loading behavior.
 - Prepared the app for **static export** and **GitHub Pages deployment**.
@@ -18,7 +22,7 @@ Enchufe Virtual is an open source showcase built with Next.js, designed to prese
 - Next.js App Router with static export (`output: 'export'`).
 - Responsive Hero, Main, Footer, and card layouts.
 - Global state management via React context.
-- Search and category filters for project listings.
+- Category filters for project listings.
 - Clean and accessible HTML structure.
 - GitHub Pages support with `.nojekyll` and custom domain handling.
 

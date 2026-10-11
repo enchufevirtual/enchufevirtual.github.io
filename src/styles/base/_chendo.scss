@@ -29,24 +29,16 @@ body {
     line-height: 1.5;
     text-align: left;
 }
-/* <---- Scroll ----> */
-* { scrollbar-width:thin; }
-:root {
-    scrollbar-color: $scroll, $card !important;
-}
-/* <---- Works on Chrome, Edge, and Safari ----> */
-*::-webkit-scrollbar {
-    width: 5px;
-}
-*::-webkit-scrollbar-track {
-    background: $card;
-    width: 5px;
-}
-*::-webkit-scrollbar-thumb {
-    background-color: $scroll;
-}
-@media (max-width: 768px) {
-::-webkit-scrollbar {display: none;}
+/* Keep the custom page ruler as the desktop scroll indicator; retain native mobile scrollbars. */
+@media (min-width: 901px) {
+    html.has-scroll-progress {
+        scrollbar-width: none;
+    }
+
+    html.has-scroll-progress::-webkit-scrollbar {
+        display: none;
+        width: 0;
+    }
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin-bottom: .5rem;

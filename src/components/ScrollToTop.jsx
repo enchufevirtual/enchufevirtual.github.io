@@ -7,6 +7,8 @@ const ScrollToTop = () => {
   const pathname = usePathname()
 
   useEffect(() => {
+    if (window.location.hash) return
+
     try {
       window.scrollTo(0, 0)
     } catch (e) {

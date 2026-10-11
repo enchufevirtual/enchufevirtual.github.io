@@ -62,7 +62,7 @@ Clona el repositorio y sigue el [README](https://github.com/orgs/enchufevirtual/
     category: 'PERSONAL',
     source: "https://github.com/soychendo/audioseven",
     type: 'FRONTEND',
-    demo: "https://audioseven.vercel.app/",
+    demo: "https://soychendo.com/audioseven/",
     author: "Soy Chendo",
     authorUrl: "https://www.soychendo.com",
     authorSocials: [

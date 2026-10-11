@@ -3,6 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&display=swap');
 // body content
 body {
   background-color: $background;
@@ -22,8 +23,7 @@ body::before {
   width: 900px;
   height: 700px;
   background: radial-gradient(ellipse 60% 50% at 50% 50%,
-    rgba(59, 130, 246, 0.25) 0%, /* azul */
-    rgba(147, 51, 234, 0.15) 40%, /* morado */
+    rgba(88, 166, 255, 0.16) 0%,
     transparent 70%
   );
   filter: blur(80px);
@@ -51,8 +51,34 @@ h2 {
   height: calc(100vh - 100px);
 }
 #ContainerLayout {
+  --home-grid-max-width: 80rem;
+  --home-grid-gutter: max(1.5rem, calc((100vw - var(--home-grid-max-width)) / 2));
+  --site-grid-line: rgba(255, 255, 255, 0.1);
+  position: relative;
   width: 100%;
-  max-width: 1280px;
   min-height: 100vh;
-  margin: 0 auto;
+  background-image:
+    linear-gradient(
+      to right,
+      transparent calc(33.333333% - 0.5px),
+      var(--site-grid-line) calc(33.333333% - 0.5px),
+      var(--site-grid-line) calc(33.333333% + 0.5px),
+      transparent calc(33.333333% + 0.5px)
+    ),
+    linear-gradient(
+      to right,
+      transparent calc(66.666667% - 0.5px),
+      var(--site-grid-line) calc(66.666667% - 0.5px),
+      var(--site-grid-line) calc(66.666667% + 0.5px),
+      transparent calc(66.666667% + 0.5px)
+    );
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: min(var(--home-grid-max-width), calc(100% - 3rem)) 100%;
+}
+
+@media (max-width: 900px) {
+  #ContainerLayout {
+    background-image: none;
+  }
 }

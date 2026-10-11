@@ -1,0 +1,316 @@
+@use '../../base/var' as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+#Header.ev-header {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  min-height: 58px;
+  padding: 0;
+  background: rgba($background, 0.96);
+}
+
+.ev-header__brand {
+  display: flex;
+  flex: 0 0 80px;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  padding: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  color: $solid;
+  text-decoration: none;
+
+  svg {
+    display: block;
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.ev-header__navigation {
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+}
+
+.ev-header__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 58px;
+  padding: 0 0.85rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  color: $gray;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background-color: rgba(255, 255, 255, 0.07);
+    color: $solid;
+  }
+}
+
+.ev-header__link:first-child {
+  border-left: 0;
+}
+
+.ev-header__actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: stretch;
+}
+
+.ev-header__contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 135px;
+  min-height: 58px;
+  padding: 0 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  background: $solid;
+  color: $background;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: $background;
+    color: $solid;
+  }
+}
+
+.ev-header__toggle {
+  display: none;
+}
+
+.scroll-progress {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#Main,
+#home-cta,
+#footer_container {
+  scroll-margin-top: 58px;
+}
+
+.scroll-progress__heading {
+  position: absolute;
+  top: 70px;
+  right: 4.5rem;
+  white-space: nowrap;
+}
+
+.scroll-progress__current {
+  color: $solid;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.scroll-progress__scale {
+  position: absolute;
+  top: var(--ruler-offset);
+  right: 0;
+  width: 60px;
+  height: var(--ruler-height);
+}
+
+.scroll-progress__tick {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.scroll-progress__tick.is-major {
+  width: 20px;
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.scroll-progress__tick.is-current .scroll-progress__tick-label {
+  visibility: hidden;
+}
+
+.scroll-progress__tick-label {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 0.55rem);
+  color: $scroll;
+  font-size: 0.55rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.scroll-progress__marker {
+  position: absolute;
+  top: var(--marker-position);
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: $primary;
+  transform: translateY(-50%);
+}
+
+.scroll-progress__marker-value {
+  position: absolute;
+  top: calc(50% + 0.4rem);
+  right: 0;
+  color: $primary;
+  font-size: 0.58rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  transform: none;
+  white-space: nowrap;
+}
+
+.scroll-progress[aria-valuenow="100"] .scroll-progress__marker {
+  transform: translateY(-100%);
+}
+
+.scroll-progress__current,
+.scroll-progress__marker-value {
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .scroll-progress {
+    display: none;
+  }
+
+  #Header.ev-header {
+    min-height: 58px;
+  }
+
+  .ev-header__toggle {
+    display: flex;
+    width: 58px;
+    min-height: 58px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    color: $solid;
+    cursor: pointer;
+
+    span {
+      width: 20px;
+      height: 1px;
+      background: currentColor;
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+    }
+
+    &.is-open span:first-child {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    &.is-open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.is-open span:last-child {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $primary;
+      outline-offset: -4px;
+    }
+  }
+
+  .ev-header__actions {
+    position: relative;
+    z-index: 2;
+  }
+
+  .ev-header__navigation {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba($background, 0.98);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-0.5rem);
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s ease;
+
+    &.is-open {
+      padding-top: 0.5rem;
+      padding-bottom: 0.75rem;
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .ev-header__link {
+    justify-content: flex-start;
+    min-height: 48px;
+    padding: 0 0.75rem;
+    border-left: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .ev-header__contact {
+    justify-content: center;
+    min-height: 58px;
+    padding: 0 0.8rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .ev-header__link,
+  .ev-header__contact,
+  .ev-header__navigation,
+  .ev-header__toggle span {
+    transition: none;
+  }
+}

@@ -7,7 +7,7 @@ import { GlobalContext } from '../context/GlobalContext';
 import { database } from '@/database/database';
 import ProductDetails from './ProductDetails';
 
-const SearchPage = ({ slug }) => {
+const ProjectPage = ({ slug }) => {
   const { language, data } = useContext(GlobalContext);
   const router = useRouter();
 
@@ -20,7 +20,7 @@ const SearchPage = ({ slug }) => {
         {product ? (
           <ProductDetails product={product} language={language} onBack={() => router.push('/')} />
         ) : (
-          <div className="search-not-found">
+          <div className="project-page__not-found">
             <p>Producto no encontrado.</p>
             <Link className="button button-primary" href="/">Volver al inicio</Link>
           </div>
@@ -30,4 +30,4 @@ const SearchPage = ({ slug }) => {
   );
 };
 
-export default SearchPage;
+export default ProjectPage;

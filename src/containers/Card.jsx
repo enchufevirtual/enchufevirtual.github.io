@@ -4,7 +4,7 @@ import React, { useState, useMemo, useContext } from "react";
 import Link from 'next/link'
 import { GlobalContext } from "../context/GlobalContext";
 
-const Card = ({ data }) => {
+const Card = ({ data, readMoreLabel = "Leer proyecto" }) => {
   const { language } = useContext(GlobalContext);
   const [pressed, setPressed] = useState(false);
 
@@ -34,14 +34,23 @@ const Card = ({ data }) => {
       onMouseLeave={() => setPressed(false)}
       className={cardClasses}
     >
+      <div className="card-image">
+        <img
+          src={`/assets/${data.image}`}
+          alt={data.title}
+          width="720"
+          height="450"
+          loading="lazy"
+        />
+      </div>
       <div className="card-body">
         <div className="card-header">
           <span className="card-type">{data.type}</span>
           <h2>{data.title}</h2>
         </div>
         <p>{summary}</p>
-          <Link className="button button-outline button-ev" href={`/search/${slug}`}>
-            Leer más
+          <Link className="button button-outline button-ev" href={`/page/${slug}`}>
+            {readMoreLabel}
           </Link>
       </div>
     </article>

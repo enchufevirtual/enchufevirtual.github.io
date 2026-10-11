@@ -8,9 +8,16 @@ export type ActionType =
 
 export type Props = {
   p?: string;
-  a?: string;
-  span?: string;
+  eyebrow?: string;
+  tagline?: string;
   title?: string;
   label?: string;
   option?: string;
+  action?: string;
+  secondaryAction?: string;
+  emptyState?: string;
+  categoriesTitle?: string;
+  categoriesHint?: string;
+  features?: string[];
+  categories?: string[];
 }

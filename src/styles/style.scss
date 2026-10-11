@@ -5,10 +5,11 @@
 
 // Enchufe Virtual - General
 @use 'enchufevirtual/enchufevirtual' as *;
-@use 'enchufevirtual/hero/hero' as *;
+@use 'enchufevirtual/hero/_hero.scss' as *;
 @use 'enchufevirtual/loader/loader' as *;
 @use 'enchufevirtual/header/header' as *;
+@use 'enchufevirtual/header/navigation' as *;
 @use 'enchufevirtual/menu/menuBtn' as *;
 @use 'enchufevirtual/main/main' as *;
 @use 'enchufevirtual/radio/radio' as *;
-@use 'enchufevirtual/footer/footer' as *;
+@use 'enchufevirtual/footer/_footer.scss' as *;

@@ -1,55 +1,41 @@
 'use client'
 
 import React, { useContext } from "react";
-import useMediaQuery from "@hooks/useMediaQuery";
 import { GlobalContext } from "../../context/GlobalContext";
 
 const Hero = () => {
   const { data } = useContext(GlobalContext);
-
-  const handleContact = () => {
-    window.location.href = "mailto:enchufevirtual@gmail.com";
-  }
-   const matches = useMediaQuery("(min-width: 1024px)");
-
-  const features = [
-    "Web a medida → Soluciones digitales personalizadas.",
-    "UX/UI profesional → Experiencias que convierten.",
-    "Open source → Código libre, proyectos colaborativos.",
-    "Soluciones tecnológicas → Distribuidores autorizados.",
-  ];
+  const title = data.hero.title || "Enchufe Virtual";
 
   return (
     <section id="Hero">
       <div className="Hero_inner">
         <div className="Hero_content">
-        <div className="Hero_intro">
-          <h1>Enchufe Virtual</h1>
-          <p className="Hero_text">{ data.hero.p }</p>
-        </div>
-
-        <div className="Hero_features">
-          {features.map((item, index) => (
-            <div className="feature-item" key={index}>
-              <span className="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M5 13l4 4L19 7" />
-                </svg>
-              </span>
-              <p>{item}</p>
-            </div>
-          ))}
-        </div>
-
-        <button type="button" onClick={handleContact} className="btn btn-hero">
-          <span>{ data.hero.span }</span>
-        </button>
-      </div>
-        {matches ? (
-          <div className="Hero_image">
-           <img src="/assets/Hero-ev.png" alt="Enchufe Virtual Hero" loading="lazy" />
+          <div className="Hero_intro">
+            <p className="Hero_eyebrow">{data.hero.eyebrow}</p>
+            <h1 className="Hero_title">
+              {title.split(" ").map((word) => (
+                <span key={word}>{word}</span>
+              ))}
+            </h1>
+            <p className="Hero_tagline">{data.hero.tagline}</p>
+            <p className="Hero_text">{data.hero.p}</p>
           </div>
-        ) : null}
+
+          <div className="Hero_actions">
+            <a className="btn btn-primary" href="#Main">{data.hero.action}</a>
+            <a className="btn btn-outline" href="mailto:enchufevirtual@gmail.com">
+              {data.hero.secondaryAction}
+            </a>
+          </div>
+
+          <ul className="Hero_features" aria-label={data.hero.eyebrow}>
+            {data.hero.features?.map((item) => (
+              <li className="feature-item" key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+
       </div>
     </section>
     

@@ -12,5 +12,6 @@ export interface PropsProvider {
 export interface Translations {
   hero: Props;
   main: Props;
+  cta: Props;
   radio: Props
 }

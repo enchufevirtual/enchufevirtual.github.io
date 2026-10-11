@@ -5,6 +5,7 @@ import { ContainerLayout } from '@/layout/ContainerLayout';
 import Loader from '@/components/loader';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ScrollProgress from '@/components/ScrollProgress';
 import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata = {
@@ -17,13 +18,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body>
         <GlobalProvider>
           <ScrollToTop />
           <ContainerLayout>
             <Loader />
             <Header />
+            <ScrollProgress />
             {children}
             <Footer />
           </ContainerLayout>

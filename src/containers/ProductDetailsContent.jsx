@@ -23,12 +23,12 @@ const techColors = {
   csharp: '#239120',
   'c#': '#e666cc',
   socketio: '#010101',
-  'web audio api': '#0099ff',
-  'pexels api': '#00c6ff',
-  'net core': '#00c6ff',
+  webaudioapi: '#0099ff',
+  pexelsapi: '#00c6ff',
+  netcore: '#00c6ff',
   express: '#000000',
-  'rest api': '#0066cc',
-  'responsive design': '#00a89d'
+  restapi: '#0066cc',
+  responsivedesign: '#00a89d'
 };
 
 const getTechColor = (value) => {
