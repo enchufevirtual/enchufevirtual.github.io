@@ -48,7 +48,7 @@ const Card = ({ data, readMoreLabel = "Leer proyecto" }) => {
           <h2>{data.title}</h2>
         </div>
         <p>{summary}</p>
-          <Link className="button button-outline button-ev" href={`/page/${slug}`}>
+          <Link className="button button-outline button-ev" href={`/project/${slug}`}>
             {readMoreLabel}
           </Link>
       </div>

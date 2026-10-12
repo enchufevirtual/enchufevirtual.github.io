@@ -12,7 +12,8 @@ Enchufe Virtual is an open source showcase built with Next.js, designed to prese
 
 - Migrated from `react-router-dom` to **Next.js App Router**.
 - Added a product/store showcase experience.
-- Created dynamic project pages via `app/page/[slug]/page.jsx`.
+- Created dynamic project pages via `app/project/[slug]/page.jsx`.
+- Kept legacy `/page/[slug]` links working by forwarding them to `/project/[slug]`.
 - Added sections for **open source**, **client work**, and **personal projects**.
 - Improved responsive UI, global styles, and loading behavior.
 - Prepared the app for **static export** and **GitHub Pages deployment**.

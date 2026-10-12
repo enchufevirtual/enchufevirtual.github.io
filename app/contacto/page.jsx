@@ -68,7 +68,7 @@ export default function ContactPage() {
       </section>
 
       <section className="contact-page__section" aria-labelledby="contact-social">
-        <h2 id="contact-social">También puedes encontrarme en</h2>
+        <h2 id="contact-social">También puedes encontrarnos en</h2>
         <div className="contact-page__grid contact-page__grid--socials">
           {socialLinks.map(({ label, href, mark }) => (
             <a
