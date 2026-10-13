@@ -19,7 +19,7 @@
     "OS",
     "EnchufeVirtual"
   ],
-  "author": "@soychendo <chendoec@gmail.com>",
+  "author": "@soychendo <chendo@enchufevirtual.com>",
   "license": "MIT",
   "dependencies": {
     "next": "^16.1.5",

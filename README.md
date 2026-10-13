@@ -116,7 +116,7 @@ Contributions are welcome. If you want to help improve the project:
 ## 📬 Contact
 
 - GitHub: [https://github.com/soychendo](https://github.com/soychendo)
-- Email: enchufevirtual@gmail.com
+- Email: contacto@enchufevirtual.com
 
 ## ⚖️ License
 

@@ -1,15 +1,15 @@
 const contactMethods = [
   {
     label: "Enchufe Virtual",
-    value: "enchufevirtual@gmail.com",
-    href: "mailto:enchufevirtual@gmail.com",
+    value: "contacto@enchufevirtual.com",
+    href: "mailto:contacto@enchufevirtual.com",
     kind: "Correo",
     mark: "@",
   },
   {
     label: "Chendo",
-    value: "chendoec@live.com",
-    href: "mailto:chendoec@live.com",
+    value: "chendo@enchufevirtual.com",
+    href: "mailto:chendo@enchufevirtual.com",
     kind: "Correo",
     mark: "@",
   },
