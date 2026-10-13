@@ -7,7 +7,9 @@ const SmoothScroll = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    const desktopViewport = window.matchMedia("(min-width: 901px)");
+    const desktopViewport = window.matchMedia(
+      "(min-width: 901px) and (pointer: fine)",
+    );
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const root = document.documentElement;
     const previousScrollBehavior = root.style.scrollBehavior;

@@ -80,7 +80,9 @@ const ScrollProgress = () => {
 
   useEffect(() => {
     let frame = 0;
-    const desktopViewport = window.matchMedia("(min-width: 901px)");
+    const desktopViewport = window.matchMedia(
+      "(min-width: 901px) and (pointer: fine)",
+    );
     const scheduleUpdate = () => {
       if (!desktopViewport.matches || frame) return;
       frame = window.requestAnimationFrame(() => {

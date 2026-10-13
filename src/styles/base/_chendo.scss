@@ -30,7 +30,7 @@ body {
     text-align: left;
 }
 /* Keep the custom page ruler as the desktop scroll indicator; retain native mobile scrollbars. */
-@media (min-width: 901px) {
+@media (min-width: 901px) and (pointer: fine) {
     html.has-scroll-progress {
         scrollbar-width: none;
     }

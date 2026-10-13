@@ -1,7 +1,13 @@
 @use '../../base/var' as *;
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+}
+
+@media (min-width: 901px) and (pointer: fine) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 #Header.ev-header {
