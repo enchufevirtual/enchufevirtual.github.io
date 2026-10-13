@@ -38,6 +38,14 @@ const socialLinks = [
   },
 ];
 
+export const metadata = {
+  title: "Contacto",
+  description: "¿Tienes una idea, una colaboración o una consulta? Contacta a Enchufe Virtual y hablemos de tu próximo proyecto digital.",
+  alternates: {
+    canonical: "/contacto/",
+  },
+};
+
 export default function ContactPage() {
   return (
     <main className="contact-page">

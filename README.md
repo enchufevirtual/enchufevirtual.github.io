@@ -2,7 +2,7 @@
 
 **Version 3.0.0**
 
-Enchufe Virtual is an open source showcase built with Next.js, designed to present software projects, stores, and digital experiences.
+Enchufe Virtual is an open source showcase built with Next.js 16, React 19, and React DOM 19. It presents software projects, stores, and digital experiences.
 
 ## 🚀 What's new in v3.0.0
 
@@ -20,7 +20,9 @@ Enchufe Virtual is an open source showcase built with Next.js, designed to prese
 
 ## ✅ Main features
 
-- Next.js App Router with static export (`output: 'export'`).
+- Next.js 16 App Router with React 19 and React DOM 19.
+- Static site export (`output: 'export'`) for GitHub Pages hosting.
+- Search engine metadata, Open Graph cards, canonical URLs, `sitemap.xml`, and `robots.txt`.
 - Responsive Hero, Main, Footer, and card layouts.
 - Global state management via React context.
 - Category filters for project listings.
@@ -38,10 +40,12 @@ Enchufe Virtual is an open source showcase built with Next.js, designed to prese
 
 ## 💻 Local development
 
+Requirements: Node.js 20.9.0 or newer and npm.
+
 Install dependencies:
 
 ```bash
-npm install
+npm ci
 ```
 
 Start the development server:
@@ -64,11 +68,13 @@ Create a production build:
 npm run build
 ```
 
-Preview the production output locally:
+Serve the static production output locally after building:
 
 ```bash
-npm run preview
+python3 -m http.server 3000 --directory out
 ```
+
+Open `http://localhost:3000` to preview the exported site. The `next start` command is not used because this project is configured for static export.
 
 ## 🚢 Deploy to GitHub Pages
 
@@ -90,19 +96,8 @@ npm run deploy
 
 - `out/CNAME` is created automatically with the custom domain.
 - `out/.nojekyll` is created automatically to ensure GitHub Pages serves `_next` assets.
-- If your site is served from a GitHub Pages repo page, make sure `homepage` in `package.json` matches the repo URL.
-
-## ⚠️ GitHub Pages path handling
-
-If your site is hosted at:
-
-```text
-https://<username>.github.io/<repo-name>
-```
-
-then `homepage` in `package.json` should use that URL.
-
-For a custom domain like `https://enchufevirtual.com`, keep the custom domain in `homepage` and verify that your DNS is correctly configured.
+- The build generates `out/sitemap.xml` and `out/robots.txt`; submit `https://enchufevirtual.com/sitemap.xml` in Google Search Console after deployment.
+- This repository is configured for the custom domain `https://enchufevirtual.com`. The `homepage` field alone does not configure Next.js paths for a GitHub Pages project URL such as `https://<username>.github.io/<repo-name>`.
 
 ## 🤝 Contributing
 

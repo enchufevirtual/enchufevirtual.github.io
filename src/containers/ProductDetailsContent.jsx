@@ -57,7 +57,7 @@ const ProductDetailsContent = ({ product, language, onBack }) => {
         </button>
       </div>
 
-      <h1 className="product-detail__autor">{product.author}</h1>
+      <h1 className="product-detail__autor">{product.title}</h1>
       <div className="product-detail__section-divider" />
       {technologies.length > 0 && (
         <div className="product-detail__tech-section">
