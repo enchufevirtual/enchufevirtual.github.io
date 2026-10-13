@@ -1,25 +1,32 @@
 1:"$Sreact.fragment"
-2:I[85463,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js"],"GlobalProvider"]
-3:I[88497,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js"],"default"]
-4:I[66121,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js"],"default"]
-5:I[2114,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js"],"default"]
-6:I[50456,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js"],"default"]
-7:I[73094,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js"],"default"]
-8:I[39756,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js"],"default"]
-9:I[37457,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js"],"default"]
-a:I[59601,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js"],"default"]
-c:I[97367,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js"],"OutletBoundary"]
-d:"$Sreact.suspense"
-10:I[97367,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js"],"ViewportBoundary"]
-12:I[97367,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js"],"MetadataBoundary"]
-14:I[68027,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js"],"default",1]
-:HL["/_next/static/chunks/0k95durtg8uv8.css","style"]
-0:{"P":null,"c":["","page","im-studio-pro",""],"q":"","i":false,"f":[[["",{"children":["page",{"children":[["slug","im-studio-pro","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0k95durtg8uv8.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/04z7xv03-0~yy.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0t2xr05rlu96l.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","data-scroll-behavior":"smooth","children":["$","body",null,{"children":["$","$L2",null,{"children":[["$","$L3",null,{}],["$","$L4",null,{}],["$","div",null,{"id":"ContainerLayout","children":[["$","$L5",null,{}],["$","$L6",null,{}],["$","$L7",null,{}],["$","$L8",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"className":"not-found-page","children":["$","div",null,{"className":"not-found-page__content","children":[["$","span",null,{"className":"not-found-page__code","children":"404"}],["$","h1",null,{"children":"Página no encontrada"}],["$","p",null,{"children":"La página que buscas no existe o ha cambiado de dirección."}],["$","a",null,{"className":"button button-primary","href":"/","children":"Volver al inicio"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$La",null,{}]]}]]}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L8",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L8",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$Lb",[["$","script","script-0",{"src":"/_next/static/chunks/0lgjxva8jdwrx.js","async":true,"nonce":"$undefined"}]],["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]]}],{},null,false,null]},null,false,"$@f"]},null,false,"$@f"]},null,false,null],["$","$1","h",{"children":[null,["$","$L10",null,{"children":"$L11"}],["$","div",null,{"hidden":true,"children":["$","$L12",null,{"children":["$","$d",null,{"name":"Next.Metadata","children":"$L13"}]}]}],null]}],false]],"m":"$undefined","G":["$14",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0k95durtg8uv8.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"KQDatBcRFKTSJ9lFLFr0w"}
-15:[]
-f:"$W15"
-16:I[70809,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js","/_next/static/chunks/0lgjxva8jdwrx.js"],"default"]
-b:["$","$L16",null,{"slug":"im-studio-pro"}]
-11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-17:I[27201,["/_next/static/chunks/04z7xv03-0~yy.js","/_next/static/chunks/0t2xr05rlu96l.js"],"IconMark"]
-e:null
-13:[["$","title","0",{"children":"Enchufe Virtual"}],["$","meta","1",{"name":"description","content":"Open Source Projects"}],["$","link","2",{"rel":"icon","href":"/assets/favicon.png"}],["$","$L17","3",{}]]
+2:"/_next/static/chunks/16rdoclzwz--x.js"
+3:I[85463,["$2"],"GlobalProvider"]
+4:I[88497,["$2"],"default"]
+5:I[66121,["$2"],"default"]
+6:I[2114,["$2"],"default"]
+7:I[50456,["$2"],"default"]
+8:I[73094,["$2"],"default"]
+9:I[39756,["$2"],"default"]
+a:I[37457,["$2"],"default"]
+b:I[59601,["$2"],"default"]
+11:I[97367,["$2"],"OutletBoundary"]
+12:"$Sreact.suspense"
+14:"ViewportBoundary"
+15:I[97367,["$2"],"$14"]
+17:"MetadataBoundary"
+18:I[97367,["$2"],"$17"]
+1a:I[68027,["$2"],"default",1]
+:HL["/_next/static/chunks/0g_rlncs6ohbz.css","style"]
+d:X
+f:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$L10",[["$","script","script-0",{"src":"/_next/static/chunks/30l3_b2l0rryb.js","async":true,"nonce":"$undefined"}]],["$","$L11",null,{"children":["$","$12",null,{"name":"Next.MetadataOutlet","children":"$@13"}]}]]}],"p":false,"v":null}}]]
+e:[["children",{"s":{"n":"slug","t":"d","k":"im-studio-pro","s":[]},"h":512,"d":{"r":["$","$1","c",{"children":[null,["$","$L9",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$La",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$d"},"c":"$Qf"}]]
+c:[["children",{"s":"page","h":512,"d":{"r":["$","$1","c",{"children":[null,["$","$L9",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$La",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$d"},"c":"$Qe"}]]
+0:{"P":null,"c":["","page","im-studio-pro",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0g_rlncs6ohbz.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/16rdoclzwz--x.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","data-scroll-behavior":"smooth","children":["$","body",null,{"children":["$","$L3",null,{"children":[["$","$L4",null,{}],["$","$L5",null,{}],["$","div",null,{"id":"ContainerLayout","children":[["$","$L6",null,{}],["$","$L7",null,{}],["$","$L8",null,{}],["$","$L9",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$La",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"className":"not-found-page","children":["$","div",null,{"className":"not-found-page__content","children":[["$","span",null,{"className":"not-found-page__code","children":"404"}],["$","h1",null,{"children":"Página no encontrada"}],["$","p",null,{"children":"La página que buscas no existe o ha cambiado de dirección."}],["$","a",null,{"className":"button button-primary","href":"/","children":"Volver al inicio"}]]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$Lb",null,{}]]}]]}]}]}]]}],"p":false,"v":null},"c":"$Qc"},"h":{"r":["$","$1","h",{"children":[null,["$","$L15",null,{"children":"$L16"}],["$","$L18",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$12",null,{"name":"Next.Metadata","children":"$L19"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$1a",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/0g_rlncs6ohbz.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"FTzpGBc-KIuYgNO5vK4Yv"}
+1b:"/_next/static/chunks/30l3_b2l0rryb.js"
+1c:I[70809,["$2","$1b"],"default"]
+d:C
+10:["$","$L1c",null,{"slug":"im-studio-pro"}]
+16:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1d:I[27201,["$2"],"IconMark"]
+13:null
+19:[["$","title","0",{"children":"Enchufe Virtual"}],["$","meta","1",{"name":"description","content":"Open Source Projects"}],["$","link","2",{"rel":"icon","href":"/assets/favicon.png"}],["$","$L1d","3",{}]]
