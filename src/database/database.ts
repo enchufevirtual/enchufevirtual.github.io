@@ -522,6 +522,59 @@ Desarrollado en C# y ASP.NET Core, con Microsoft Bot Framework y una arquitectur
 > Este repositorio se publica como proyecto de aprendizaje; su README indica que aún no está preparado para producción.`
   },
   {
+    title: "Cgm Tvs Motos",
+    slug: buildSlug("Cgm Tvs Motos"),
+    image: "cgmtvs.jpg",
+    category: 'CLIENTS',
+    source: "",
+    type: 'FULLSTACK',
+    demo: "https://cgmtvsmotos.com/",
+    author: "Soy Chendo",
+    authorUrl: "https://www.soychendo.com",
+    authorSocials: [
+      { label: "GitHub", url: "https://github.com/soychendo" },
+      { label: "Facebook", url: "https://www.facebook.com/soychendo" },
+      { label: "Instagram", url: "https://www.instagram.com/soychendoo" }
+    ],
+    technologies: ["WordPress", "WooCommerce", "PHP", "MySQL", "Responsive Design"],
+    description_card: "Tienda en línea de repuestos originales y accesorios para motocicletas TVS, Haojue, Benelli, Morbidelli y Keeway.",
+    description_en: "An online store for genuine motorcycle parts and accessories from TVS, Haojue, Benelli, Morbidelli, and Keeway.",
+    description_detail_en: `### CGM TVS MOTOS
+
+**CGM TVS MOTOS** is an Ecuadorian motorcycle-parts retailer serving riders and workshops through an online store. The catalog focuses on genuine TVS spare parts and also includes products for Haojue, Benelli, Morbidelli, and Keeway motorcycles, plus accessories.
+
+### What customers can do
+
+- Browse spare parts and accessories by category or motorcycle brand.
+- Search the catalog, review product details, and add items to a shopping cart.
+- Access account features and order tracking, or contact the store for assistance.
+
+### Example
+
+A rider looking for a replacement part can browse the catalog by brand, check the available product information, and add the item to the cart.
+
+### About the business
+
+CGM TVS MOTOS began operating in Ecuador in 2019, initially focused on TVS spare parts. The company later expanded its catalog to include additional motorcycle brands.`,
+    description_es: `### CGM TVS MOTOS
+
+**CGM TVS MOTOS** es una tienda ecuatoriana especializada en repuestos para motocicletas. Su catálogo se enfoca en repuestos originales TVS e incluye también productos para motos Haojue, Benelli, Morbidelli y Keeway, además de accesorios.
+
+### Qué pueden hacer los clientes
+
+- Explorar repuestos y accesorios por categoría o marca de motocicleta.
+- Buscar en el catálogo, revisar la información de los productos y añadir artículos al carrito.
+- Acceder a opciones de cuenta y seguimiento de pedidos, o contactar al equipo de atención.
+
+### Ejemplo de uso
+
+Una persona que necesita reemplazar una pieza puede buscarla por marca, consultar la información disponible y añadir el producto al carrito.
+
+### Sobre el negocio
+
+CGM TVS MOTOS inició sus actividades en Ecuador en 2019, enfocándose en repuestos TVS. Después amplió su catálogo para incorporar otras marcas de motocicletas.`
+  },
+  {
     title: "Im Studio Profesional",
     slug: buildSlug("Im Studio Pro"),
     image: "imstudio.jpg",
