@@ -11,7 +11,7 @@ export const database: DataBase[] = [
     category: 'OPEN_SOURCE',
     source: "https://github.com/enchufevirtual/radio-client",
     type: 'FULLSTACK',
-    demo: "",
+    demo: "https://radio.enchufevirtual.com/",
     author: "Soy Chendo",
     authorUrl: "https://www.soychendo.com",
     authorSocials: [
