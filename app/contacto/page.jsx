@@ -48,7 +48,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="contact-page">
+    <main id="contact-page" className="contact-page">
       <header className="contact-page__intro">
         <p className="contact-page__eyebrow">ENCHUFE VIRTUAL · CONTACTO</p>
         <h1>Hablemos de tu próximo proyecto.</h1>

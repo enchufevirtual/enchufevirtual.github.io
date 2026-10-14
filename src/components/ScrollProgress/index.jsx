@@ -14,6 +14,12 @@ const projectSections = [
   { id: "Main", labels: { es: "Proyecto", en: "Project" } },
   { id: "footer_container", labels: { es: "Comunidad", en: "Community" } },
 ];
+const contactSections = [
+  { id: "contact-page", labels: { es: "Contacto", en: "Contact" } },
+  { id: "contact-emails", labels: { es: "Correo", en: "Email" } },
+  { id: "contact-social", labels: { es: "Redes", en: "Social" } },
+  { id: "footer_container", labels: { es: "Comunidad", en: "Community" } },
+];
 const scaleValues = Array.from({ length: 101 }, (_, value) => value);
 const rulerTopInset = 20;
 const rulerBottomInset = 28;
@@ -21,7 +27,13 @@ const rulerBottomInset = 28;
 const ScrollProgress = () => {
   const { language } = useContext(GlobalContext);
   const pathname = usePathname();
-  const sections = pathname === "/" ? homeSections : projectSections;
+  const isContactPage =
+    pathname === "/contacto" || pathname.startsWith("/contacto/");
+  const sections = pathname === "/"
+    ? homeSections
+    : isContactPage
+      ? contactSections
+      : projectSections;
   const [scrollMetrics, setScrollMetrics] = useState({
     progress: 0,
     rulerHeight: 0,
@@ -34,6 +46,7 @@ const ScrollProgress = () => {
   const percentage = Math.round(scrollMetrics.progress);
   const isKnownPage =
     pathname === "/" ||
+    isContactPage ||
     pathname.startsWith("/project/") ||
     pathname.startsWith("/page/");
 
